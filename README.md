@@ -8,6 +8,9 @@ a serius game
 - [ ] add level music
 - [ ] add image
 - [ ] start making decition
+- [ ] save level in json file
+- [ ] see tree view of level
+- [ ] make level designer
 - [ ] ....
 
 # Suggest

@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="card text-center">
+                <div class="card text-center" style="min-height: 600px;">
                     <div class="card-header">
                         <nav class="nav nav-pills nav-justified">
                             <!-- <a class="nav-item nav-link active" href="#">Active</a> -->
@@ -24,7 +24,7 @@
                             </a>
                             <a class="nav-item nav-link disabled" href="#">
                                 <div>امتیاز</div>
-                                <div id="score">0</div>
+                                <div id="totlaScore">0</div>
                             </a>
                             <a class="nav-item nav-link disabled" href="#">
                                 <div>ساعت</div>
@@ -33,7 +33,7 @@
                         </nav>
                     </div>
                     <div class="card-body align-items-end">
-                        <div class="row align-items-center" style="min-height: 350px;">
+                        <div class="row align-items-center" style="height: 100%;">
                             <div class="col">
                                 <h5 class="card-title">Special title treatment</h5>
                                 <p class="card-text">With supporting text below as a natural lead-in to additional
@@ -45,8 +45,9 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
                     <div class="card-footer text-muted">
-                        <button type="button" class="btn btn-outline-secondary btn-lg btn-block">پاسخ اول</button>
-                        <button type="button" class="btn btn-outline-warning btn-lg btn-block">پاسخ دوم</button>
+                        <button type="button" class="btn btn-outline-secondary btn-lg btn-block" onclick="onClickOption(1)">پاسخ
+                            اول</button>
+                        <button type="button" class="btn btn-outline- btn-lg btn-block">پاسخ دوم</button>
                         <!-- can use list group -->
                     </div>
                 </div>
@@ -64,6 +65,10 @@
                                 <tr>
                                     <td>section</td>
                                     <td id="section">1</td>
+                                </tr>
+                                <tr>
+                                    <td>stageId</td>
+                                    <td id="stageId">1</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -106,50 +111,149 @@
     <script>
         var time;
         var energy;
-        var score;
+        var totlaScore;
         var stageId;
 
         var currentStage;
 
         var stages = [{
-            stageId: 1,
-            level: 1,
-            section: 1,
-            name: 'بیدار شدن',
-            desc: 'ساعت زنگ می زند. می خواهی چکار کنی؟',
-            options: [{
-                    title: 'قطع زنگ و خوابیدن',
-                    color: 'btn-outline-secondary',
-                    event: {}
-                },
-                {
-                    title: 'بیدار شدن',
-                    color: 'btn-outline-warning',
-                    event: {}
-                }
-            ]
-        }]
+                stageId: 1,
+                level: 1,
+                section: 1,
+                name: 'بیدار شدن',
+                desc: 'ساعت زنگ می زند. می خواهی چکار کنی؟',
+                options: [{
+                        optionId: 1,
+                        title: 'قطع زنگ و خوابیدن',
+                        color: 'btn-outline-secondary',
+                        event: {
+                            nextStage: 2,
+                            addedTime: 15,
+                            addedEnergy: 20,
+                            score: 10
+                        }
+                    },
+                    {
+                        optionId: 2,
+                        title: ' بیدار شدن و شستن و شو',
+                        color: 'btn-outline-warning',
+                        event: {
+                            nextStage: 10,
+                            addedTime: 5,
+                            addedEnergy: 0,
+                            score: 15
+                        }
+                    }
+                ]
+            },
+            {
+                stageId: 2,
+                level: 1,
+                section: 1,
+                name: 'بیدار شدن',
+                desc: 'باز هم ساعت زنگ می زند. نمی خواهی بیدار شوی؟',
+                options: [{
+                        optionId: 1,
+                        title: 'قطع زنگ و خوابیدن',
+                        color: 'btn-outline-secondary',
+                        event: {
+                            nextStage: 2,
+                            addedTime: 15,
+                            addedEnergy: 5,
+                            score: 5
+                        }
+                    },
+                    {
+                        optionId: 2,
+                        title: 'بیدار شدن',
+                        color: 'btn-outline-warning',
+                        event: {
+                            nextStage: 10,
+                            addedTime: 5,
+                            addedEnergy: 0,
+                            score: 15
+                        }
+                    }
+                ]
+            },
+            {
+                stageId: 10,
+                level: 1,
+                section: 2,
+                name: 'آماده شدن',
+                desc: 'حالا که بیدار شدی می خواهی چکار کنی؟',
+                options: [{
+                        optionId: 1,
+                        title: 'مرتب کردن اتاق',
+                        color: 'btn-outline-secondary',
+                        event: {
+                            nextStage: 11,
+                            addedTime: 15,
+                            addedEnergy: 5,
+                            score: 5
+                        }
+                    },
+                    {
+                        optionId: 2,
+                        title: 'خوردن صبحانه',
+                        color: 'btn-outline-warning',
+                        event: {
+                            nextStage: 12,
+                            addedTime: 5,
+                            addedEnergy: 0,
+                            score: 15
+                        }
+                    },
+                    {
+                        optionId: 2,
+                        title: 'جمع کردن وسایل برای  مدرسه',
+                        color: 'btn-outline-info',
+                        event: {
+                            nextStage: 13,
+                            addedTime: 5,
+                            addedEnergy: 0,
+                            score: 15
+                        }
+                    }
+                ]
+            }
+        ];
 
         $(document).ready(function () {
             startGame();
-        })
+
+            //read level from file
+            $.ajax({
+                dataType: "json",
+                url: "level/level1.json",
+                success: function (data) {
+                    console.log(data);
+                }
+            });
+        });
 
 
         function startGame() {
-            score = 0;
+            totlaScore = 0;
             time = 800;
             energy = 50;
             stageId = 1;
             makeStage();
-        }
+        };
 
 
         function makeStage() {
-            $('#score').html(score);
-            $('#time').html(time);
+            $('#totlaScore').html(totlaScore);
+            $('#time').html(makeTime(time));
             $('#energy').html(energy);
 
-            currentStage = stages.find(x => x.stageId === 1);
+            $('#stageId').html(stageId);
+
+            currentStage = stages.find(x => x.stageId === stageId);
+            if (!currentStage) {
+                console.log('can not find stage')
+                return;
+            }
             console.log(currentStage);
 
             $('#level').html(currentStage.level);
@@ -159,13 +263,41 @@
 
             $('.card-footer').empty();
             $.each(currentStage.options, function (index, value) {
-                var btn = '<button type="button" class="btn ' + value.color + ' btn-lg btn-block">' + value.title +
-                    '</button>';
-                $('.card-footer').append(btn);
+                $('.card-footer').append('<button type="button" class="btn ' + value.color +
+                    ' btn-lg btn-block"  onclick="onClickOption(' + value.optionId + ')">' + value.title +
+                    '</button>');
             })
+        };
+
+        function onClickOption(opId) {
+            var option = currentStage.options.find(x => x.optionId === opId);
+            if (!option) {
+                console.log('can not find option')
+                return;
+            }
+            var event = option.event;
+
+            totlaScore += event.score;
+            time += event.addedTime;
+            energy += event.addedEnergy;
+            stageId = event.nextStage;
+            makeStage();
         }
 
-
+        function makeTime(time) {
+            var hour = Math.floor(time / 100);
+            if (hour >= 24) {
+                hour -= 24;
+            }
+            var min = time % 100;
+            if (min >= 60) {
+                hour++;
+                min -= 60;
+            }
+            if (min < 10)
+                return hour + ':0' + min;
+            return hour + ':' + min;
+        };
         //$('#myModal').modal(options)
         //$('#myModal').modal('show')
         //$('#myModal').modal('hide')
