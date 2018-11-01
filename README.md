@@ -4,6 +4,11 @@ a serius game
 # Todo
 
 - [ ] start making
+- [ ] add event sound
+- [ ] add level music
+- [ ] add image
+- [ ] start making decition
+- [ ] ....
 
 # Suggest
 
