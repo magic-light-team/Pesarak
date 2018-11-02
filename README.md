@@ -14,6 +14,9 @@ a serius game
 - [ ] ....
 
 # Suggest
-
 * using material design
 * using React native
+
+# Problems
+- [ ] Read local json file => we use online [`MyJson](http://myjson.com/)
+- [ ] see a big picture of choise and event
