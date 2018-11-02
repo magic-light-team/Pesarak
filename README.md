@@ -15,7 +15,9 @@ a serius game
 
 # Suggest
 * using material design
-* using React native
+* convert project code to TypeScript
+* use Angular or React
+* using React native for mobile version
 
 # Problems
 - [ ] Read local json file => we use online [`MyJson`](http://myjson.com/)
