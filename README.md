@@ -18,5 +18,5 @@ a serius game
 * using React native
 
 # Problems
-- [ ] Read local json file => we use online [`MyJson](http://myjson.com/)
+- [ ] Read local json file => we use online [`MyJson`](http://myjson.com/)
 - [ ] see a big picture of choise and event
