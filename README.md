@@ -5,6 +5,7 @@ a serius game
 
 - [*] start making
 - [*] start making decition
+- [ ] define win or loss element of game
 - [ ] load level from file (json file)
 - [ ] see level diagram
 - [ ] add event sound
