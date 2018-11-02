@@ -3,12 +3,13 @@ a serius game
 
 # Todo
 
-- [ ] start making
+- [*] start making
+- [*] start making decition
+- [ ] load level from file (json file)
+- [ ] see level diagram
 - [ ] add event sound
 - [ ] add level music
 - [ ] add image
-- [ ] start making decition
-- [ ] save level in json file
 - [ ] see tree view of level
 - [ ] make level designer
 - [ ] ....
@@ -18,6 +19,7 @@ a serius game
 * convert project code to TypeScript
 * use Angular or React
 * using React native for mobile version
+* make level designer and save level in file (json file)
 
 # Problems
 - [ ] Read local json file => we use online [`MyJson`](http://myjson.com/)
