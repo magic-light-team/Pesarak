@@ -5,6 +5,8 @@ a serius game
 
 - [*] start making
 - [*] start making decition
+- [ ] add pic gif or image
+- [ ] add graphic effect
 - [ ] define win or loss element of game
 - [ ] load level from file (json file)
 - [ ] see level diagram
