@@ -1,5 +1,6 @@
 # graph 
 * google chart
+* see all choose
 
 ## mxgraph page list
 [tree](file:///D:/Project/repo/mxgraph-master/javascript/examples/tree.html)
