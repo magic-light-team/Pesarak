@@ -107,8 +107,13 @@
         </div>
     </div>
     <!-- modal -->
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <!--insert level data -->
+    <script src="level/level1.js"></script>
+
     <script>
         var time;
         var energy;
@@ -221,6 +226,8 @@
         ];
 
         $(document).ready(function () {
+            //console.log('level1',level1);
+            stages = level1;
             startGame();
 
             //read level from file

@@ -1,7 +1,7 @@
 # Pesarak
 a serius game
 
-# Todo
+## Todo
 
 - [*] start making
 - [*] start making decition
@@ -17,13 +17,19 @@ a serius game
 - [ ] make level designer
 - [ ] ....
 
-# Suggest
+## Suggest
+
 * using material design
 * convert project code to TypeScript
 * use Angular or React
 * using React native for mobile version
 * make level designer and save level in file (json file)
 
-# Problems
-- [ ] Read local json file => we use online [`MyJson`](http://myjson.com/)
+## Problems
+
+- [ ] Read local json file
+    * we use online [`MyJson`](http://myjson.com/)
+    * or use back-end system
+    * use js file
+
 - [ ] see a big picture of choise and event
