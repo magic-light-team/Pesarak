@@ -1,4 +1,5 @@
 # Pesarak
+
 a serius game
 
 ## Todo
@@ -7,6 +8,9 @@ a serius game
 - [*] start making decition
 - [ ] add pic gif or image
 - [ ] add graphic effect
+  - [ ] level fade out & fade in
+  - [ ] encrease score
+  - [ ] choose effect
 - [ ] define win or loss element of game
 - [ ] load level from file (json file)
 - [ ] see level diagram
@@ -28,8 +32,8 @@ a serius game
 ## Problems
 
 - [ ] Read local json file
-    * we use online [`MyJson`](http://myjson.com/)
-    * or use back-end system
-    * use js file
+  * we use online [`MyJson`](http://myjson.com/)
+  * or use back-end system
+  * use js file
 
 - [ ] see a big picture of choise and event
