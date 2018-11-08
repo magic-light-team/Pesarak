@@ -4,6 +4,7 @@ var totalScore;
 var stageId;
 
 var currentStage;
+var disableOptions = [];
 
 var stages = [
 	{
@@ -13,27 +14,27 @@ var stages = [
 		name: 'بیدار شدن',
 		desc: 'ساعت زنگ می زند. می خواهی چکار کنی؟',
 		options: [{
-				optionId: 1,
-				title: 'قطع زنگ و خوابیدن',
-				color: 'btn-outline-secondary',
-				event: {
-					nextStage: 2,
-					addedTime: 15,
-					addedEnergy: 20,
-					score: 10
-				}
-			},
-			{
-				optionId: 2,
-				title: ' بیدار شدن و شستن و شو',
-				color: 'btn-outline-warning',
-				event: {
-					nextStage: 10,
-					addedTime: 5,
-					addedEnergy: 0,
-					score: 15
-				}
+			optionId: 1,
+			title: 'قطع زنگ و خوابیدن',
+			color: 'btn-outline-secondary',
+			event: {
+				nextStage: 2,
+				addedTime: 15,
+				addedEnergy: 20,
+				score: 10
 			}
+		},
+		{
+			optionId: 2,
+			title: ' بیدار شدن و شستن و شو',
+			color: 'btn-outline-warning',
+			event: {
+				nextStage: 10,
+				addedTime: 5,
+				addedEnergy: 0,
+				score: 15
+			}
+		}
 		]
 	},
 	{
@@ -43,27 +44,27 @@ var stages = [
 		name: 'بیدار شدن',
 		desc: 'باز هم ساعت زنگ می زند. نمی خواهی بیدار شوی؟',
 		options: [{
-				optionId: 1,
-				title: 'قطع زنگ و خوابیدن',
-				color: 'btn-outline-secondary',
-				event: {
-					nextStage: 2,
-					addedTime: 15,
-					addedEnergy: 5,
-					score: 5
-				}
-			},
-			{
-				optionId: 2,
-				title: 'بیدار شدن',
-				color: 'btn-outline-warning',
-				event: {
-					nextStage: 10,
-					addedTime: 5,
-					addedEnergy: 0,
-					score: 15
-				}
+			optionId: 1,
+			title: 'قطع زنگ و خوابیدن',
+			color: 'btn-outline-secondary',
+			event: {
+				nextStage: 2,
+				addedTime: 15,
+				addedEnergy: 5,
+				score: 5
 			}
+		},
+		{
+			optionId: 2,
+			title: 'بیدار شدن',
+			color: 'btn-outline-warning',
+			event: {
+				nextStage: 10,
+				addedTime: 5,
+				addedEnergy: 0,
+				score: 15
+			}
+		}
 		]
 	},
 	{
@@ -73,38 +74,38 @@ var stages = [
 		name: 'آماده شدن',
 		desc: 'حالا که بیدار شدی می خواهی چکار کنی؟',
 		options: [{
-				optionId: 1,
-				title: 'مرتب کردن اتاق',
-				color: 'btn-outline-secondary',
-				event: {
-					nextStage: 11,
-					addedTime: 15,
-					addedEnergy: 5,
-					score: 5
-				}
-			},
-			{
-				optionId: 2,
-				title: 'خوردن صبحانه',
-				color: 'btn-outline-warning',
-				event: {
-					nextStage: 12,
-					addedTime: 5,
-					addedEnergy: 0,
-					score: 15
-				}
-			},
-			{
-				optionId: 2,
-				title: 'جمع کردن وسایل برای  مدرسه',
-				color: 'btn-outline-info',
-				event: {
-					nextStage: 13,
-					addedTime: 5,
-					addedEnergy: 0,
-					score: 15
-				}
+			optionId: 1,
+			title: 'مرتب کردن اتاق',
+			color: 'btn-outline-secondary',
+			event: {
+				nextStage: 11,
+				addedTime: 15,
+				addedEnergy: 5,
+				score: 5
 			}
+		},
+		{
+			optionId: 2,
+			title: 'خوردن صبحانه',
+			color: 'btn-outline-warning',
+			event: {
+				nextStage: 12,
+				addedTime: 5,
+				addedEnergy: 0,
+				score: 15
+			}
+		},
+		{
+			optionId: 2,
+			title: 'جمع کردن وسایل برای  مدرسه',
+			color: 'btn-outline-info',
+			event: {
+				nextStage: 13,
+				addedTime: 5,
+				addedEnergy: 0,
+				score: 15
+			}
+		}
 		]
 	}
 ];
@@ -131,7 +132,7 @@ $(document).ready(function () {
 
 function startGame() {
 	totalScore = 0;
-	time = 800;
+	time = 700;
 	energy = 50;
 	stageId = 1;
 	makeStage();
@@ -159,12 +160,11 @@ function makeStage() {
 
 	$('.card-footer').empty();
 	$.each(currentStage.options, function (index, value) {
+		var isDisable = disableOptions.includes(value.optionId) ? " disabled" : "";
 		$('.card-footer').append('<button type="button" class="btn ' + value.color +
-			' btn-lg btn-block"  onclick="onClickOption(' + value.optionId + ')">' + value.title +
+			' btn-lg btn-block"  onclick="onClickOption(' + value.optionId + ')' + isDisable + '">' + value.title +
 			'</button>');
 	})
-
-
 
 };
 
@@ -183,9 +183,18 @@ function onClickOption(opId) {
 	totalScore += event.score;
 	time += event.addedTime;
 	energy += event.addedEnergy;
+
+	if (stageId == event.nextStage) {
+		// add to disable option
+		disableOptions.push(opId);
+	} else {
+		disableOptions = [];
+	}
+
 	stageId = event.nextStage;
 
 	var randomAlertColor = alertColor[Math.floor(Math.random() * alertColor.length)];
+
 	$('div.jumbotron>div.container').append(
 		'<div class="alert text-left ' + randomAlertColor +
 		' alert-dismissible fade show" role="alert"><strong>تغییرات:</strong> score:' +
