@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/indexStyle.css">
+    <link rel="stylesheet" href="assets/css/indexStyle.css">
     <title>پسرک</title>
 </head>
 
@@ -33,6 +33,13 @@
                         </nav>
                     </div>
                     <div class="card-body align-items-end">
+                        <div class="row">
+                            <div class="col">
+                                <div class="progress">
+                                        <div id="timeBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row align-items-center" style="height: 400px">
                             <div class="col">
                                 <h5 class="card-title">Special title treatment</h5>
@@ -45,9 +52,9 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
                     <div class="card-footer text-muted">
-                        <button type="button" class="btn btn-outline-secondary btn-lg btn-block" onclick="onClickOption(1)">پاسخ
+                        <button type="button" class="selectable btn btn-outline-secondary btn-lg btn-block" onclick="onClickOption(1)">پاسخ
                             اول</button>
-                        <button type="button" class="btn btn-outline- btn-lg btn-block">پاسخ دوم</button>
+                        <button type="button" class="selectable btn btn-outline- btn-lg btn-block">پاسخ دوم</button>
                         <!-- can use list group -->
                     </div>
                 </div>
@@ -106,11 +113,12 @@
             </div>
         </div>
     </div>
-	<!-- modal -->
+    <!-- modal -->
 
-	<script src="assets/js/jquery-3.3.1.min.js"></script>
-	<script src="assets/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/js/pesarak.js"></script>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/timer.js"></script>
+    <script src="assets/js/pesarak.js"></script>
     <!--insert level data -->
     <script src="level/level1.js"></script>
 
