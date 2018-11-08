@@ -121,6 +121,7 @@
         var stageId;
 
         var currentStage;
+        var disableOption=[];
 
         var stages = [{
                 stageId: 1,
@@ -275,13 +276,12 @@
 
             $('.card-footer').empty();
             $.each(currentStage.options, function (index, value) {
+                var disable = disableOption.includes(value.optionId)? "disabled" : "";
+                // need class - see bootstarp doc
                 $('.card-footer').append('<button type="button" class="btn ' + value.color +
-                    ' btn-lg btn-block"  onclick="onClickOption(' + value.optionId + ')">' + value.title +
+                    ' btn-lg btn-block"  onclick="onClickOption(' + value.optionId + ')" '+disable+'>' + value.title +
                     '</button>');
             })
-
-
-
         };
 
         const alertColor = ['alert-primary', 'alert-secondary', 'alert-success', 'alert-danger', 'alert-warning',
@@ -299,7 +299,16 @@
             totlaScore += event.score;
             time += event.addedTime;
             energy += event.addedEnergy;
+
+            if(stageId == event.nextStage){
+                //make disable btn list
+                disableOption.push(stageId);
+                console.log(disableOption);
+            }else{
+                disableOption=[];
+            }
             stageId = event.nextStage;
+
 
             var randomAlertColor = alertColor[Math.floor(Math.random() * alertColor.length)];
             $('div.jumbotron>div.container').append(
