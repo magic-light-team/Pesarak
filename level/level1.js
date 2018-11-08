@@ -275,7 +275,7 @@ level1 = [
                 title: "آره کمی مرتب کردم",
                 color: "btn-outline-secondary",
                 event: {
-                    nextStage: 26,
+                    nextStage: 27,
                     addedTime: 5,
                     addedEnergy: 0,
                     score: 5
@@ -286,7 +286,7 @@ level1 = [
                 title: "نه نیازی به مرتب کردن نیست",
                 color: "btn-outline-secondary",
                 event: {
-                    nextStage: 26,
+                    nextStage: 27,
                     addedTime: 5,
                     addedEnergy: 0,
                     score: 5
