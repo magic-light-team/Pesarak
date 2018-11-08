@@ -4,8 +4,8 @@ a serius game
 
 ## Todo
 
-- [*] start making
-- [*] start making decition
+- [x] start making
+- [x] start making decition
 - [ ] add pic gif or image
 - [ ] add graphic effect
   - [ ] level fade out & fade in
