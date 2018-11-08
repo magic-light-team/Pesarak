@@ -162,7 +162,7 @@ function makeStage() {
 	$.each(currentStage.options, function (index, value) {
 		var isDisable = disableOptions.includes(value.optionId) ? " disabled" : "";
 		$('.card-footer').append('<button type="button" class="btn ' + value.color +
-			' btn-lg btn-block"  onclick="onClickOption(' + value.optionId + ')' + isDisable + '">' + value.title +
+			' btn-lg btn-block"  onclick="onClickOption(' + value.optionId + ')"' + isDisable + '>' + value.title +
 			'</button>');
 	})
 
@@ -187,6 +187,7 @@ function onClickOption(opId) {
 	if (stageId == event.nextStage) {
 		// add to disable option
 		disableOptions.push(opId);
+		console.log(disableOptions);
 	} else {
 		disableOptions = [];
 	}
