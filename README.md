@@ -6,19 +6,27 @@ a serius game
 
 - [x] start making
 - [x] start making decition
-- [ ] add pic gif or image
+- [x] load level from file (json file)
+- [ ] Add Page
+  - [ ] make start screen
+  - [ ] make score page
+- [ ] add graphic
+  - [ ] add pic gif or image
+  - [ ] add theme for any stage
+  - [ ] add image
 - [ ] add graphic effect
   - [ ] level fade out & fade in
   - [ ] encrease score
   - [ ] choose effect
 - [ ] define win or loss element of game
-- [ ] load level from file (json file)
-- [ ] see level diagram
-- [ ] add event sound
-- [ ] add level music
-- [ ] add image
-- [ ] see tree view of level
-- [ ] make level designer
+- [ ] level designer
+  - [ ] see level diagram
+  - [ ] see tree view of level
+  - [ ] make level designer
+- [ ] add sound effect
+  - [x] add sound player
+  - [ ] add event sound
+  - [ ] add level music
 - [ ] ....
 
 ## Suggest
@@ -32,8 +40,8 @@ a serius game
 ## Problems
 
 - [ ] Read local json file
-  * we use online [`MyJson`](http://myjson.com/)
-  * or use back-end system
-  * use js file
+  - [ ] we use online [`MyJson`](http://myjson.com/)
+  - [ ] or use back-end system
+  - [x] use js file
 
 - [ ] see a big picture of choise and event
