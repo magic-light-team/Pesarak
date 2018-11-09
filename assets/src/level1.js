@@ -545,7 +545,7 @@ level1 = [{
         title: "با بچه ها می ریم پارک",
         color: "btn-outline-secondary",
         event: {
-            nextStage: 36,
+            nextStage: 40,
             addedTime: 180,
             addedEnergy: -100,
             score: 20
@@ -556,7 +556,7 @@ level1 = [{
         title: "میرم کتابخونه",
         color: "btn-outline-secondary",
         event: {
-            nextStage: 36,
+            nextStage: 40,
             addedTime: 120,
             addedEnergy: -120,
             score: 100
@@ -567,7 +567,7 @@ level1 = [{
         title: "میروم خونه",
         color: "btn-outline-secondary",
         event: {
-            nextStage: 36,
+            nextStage: 40,
             addedTime: 20,
             addedEnergy: 0,
             score: 20
@@ -581,7 +581,7 @@ level1 = [{
     section: 1,
     name: "در خانه",
     desc: "پدر: روزت چطور بود؟",
-    background: "way.jpg",
+    background: "room.jpg",
     options: [{
         optionId: 1,
         title: "گفتن حقیقت",
