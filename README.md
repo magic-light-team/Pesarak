@@ -16,15 +16,17 @@ a serius game
 - [ ] Add Page
   - [x] make start screen
   - [ ] make score page
-  - [ ] make about page
+  - [x] make about page
 - [ ] add graphic
   - [ ] add pic gif or image
-  - [ ] add theme for any stage
+  - [x] add theme for any stage
   - [ ] add image
 - [ ] add graphic effect
   - [ ] level fade out & fade in
   - [ ] encrease score
   - [ ] choose effect
+  - [ ] add pop-up
+  - [ ] add achievement
 - [ ] define win or loss element of game
 - [ ] level designer
   - [ ] see level diagram
