@@ -158,8 +158,8 @@ function makeStage() {
 
 	$('#level').html(currentStage.level);
 	$('#section').html(currentStage.section);
-	$('.card-title').html(currentStage.name);
-	$('.card-text').html(currentStage.desc);
+	$('#content .card-title').html(currentStage.name);
+	$('#content .card-text').html(currentStage.desc);
 	$('div.card').css('background-image', "url('assets/image/" + currentStage.background + "')");
 
 

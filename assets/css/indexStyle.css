@@ -30,12 +30,12 @@ div.card-header nav a {
     text-shadow: 2px 2px 8px #fff;
 }
 
-h5.card-title {
+#content h5.card-title {
     font-size: 2rem !important;
     font-weight: bold;
     text-shadow: 2px 2px 8px #393838;
 }
-p.card-text{
+#content p.card-text{
     font-size: 1.5rem !important;
     font-weight: bold;
     text-shadow: 2px 2px 8px #393838;
