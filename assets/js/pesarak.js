@@ -5,6 +5,7 @@ var stageId;
 
 var currentStage;
 var disableOptions = [];
+var saveAllChoises = [];
 
 var stages = [
 	{
@@ -193,6 +194,8 @@ function onClickOption(opId) {
 	}
 
 	stageId = event.nextStage;
+	
+	saveAllChoises.push({stageId:stageId,optionId:opId});
 
 	var randomAlertColor = alertColor[Math.floor(Math.random() * alertColor.length)];
 
