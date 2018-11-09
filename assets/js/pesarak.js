@@ -193,7 +193,9 @@ function onClickOption(opId) {
 		// add to disable option
 		disableOptions.push(opId);
 		console.log(disableOptions);
-	} else {
+	} else if(event.nextStage == -1){
+		window.location.href = 'score.html';
+	}else{
 		disableOptions = [];
 	}
 
