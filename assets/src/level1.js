@@ -196,7 +196,7 @@ level1 = [{
     {
         optionId: 2,
         title: "نوشیدن چای",
-        color: "btn-outline-secondary",
+        color: "btn-outline-danger",
         event: {
             nextStage: 20,
             addedTime: 5,
@@ -207,7 +207,7 @@ level1 = [{
     {
         optionId: 3,
         title: "خوردن لقمه",
-        color: "btn-outline-secondary",
+        color: "btn-outline-warning",
         event: {
             nextStage: 20,
             addedTime: 5,
@@ -249,7 +249,7 @@ level1 = [{
     {
         optionId: 2,
         title: "نه ننوشتم",
-        color: "btn-outline-secondary",
+        color: "btn-outline-warning",
         event: {
             nextStage: 26,
             addedTime: 5,
@@ -260,7 +260,7 @@ level1 = [{
     {
         optionId: 3,
         title: "قطع صحبت و رفتن",
-        color: "btn-outline-secondary",
+        color: "btn-outline-info",
         event: {
             nextStage: 30,
             addedTime: 0,
@@ -291,7 +291,7 @@ level1 = [{
     {
         optionId: 2,
         title: "نه نیازی به مرتب کردن نیست",
-        color: "btn-outline-secondary",
+        color: "btn-outline-primary",
         event: {
             nextStage: 27,
             addedTime: 5,
@@ -302,7 +302,7 @@ level1 = [{
     {
         optionId: 3,
         title: "قطع صحبت و رفتن",
-        color: "btn-outline-secondary",
+        color: "btn-outline-warning",
         event: {
             nextStage: 30,
             addedTime: 0,
@@ -333,7 +333,7 @@ level1 = [{
     {
         optionId: 2,
         title: "نه فکر نکنم",
-        color: "btn-outline-secondary",
+        color: "btn-outline-warning",
         event: {
             nextStage: 30,
             addedTime: 5,
@@ -364,7 +364,7 @@ level1 = [{
     {
         optionId: 2,
         title: "صحبت با دوستان",
-        color: "btn-outline-secondary",
+        color: "btn-outline-warning",
         event: {
             nextStage: 31,
             addedTime: 15,
@@ -375,7 +375,7 @@ level1 = [{
     {
         optionId: 3,
         title: "نشستن یک گوشه",
-        color: "btn-outline-secondary",
+        color: "btn-outline-danger",
         event: {
             nextStage: 31,
             addedTime: 15,
@@ -406,7 +406,7 @@ level1 = [{
     {
         optionId: 2,
         title: "سعی می کنم از هم جدایشان کنم",
-        color: "btn-outline-secondary",
+        color: "btn-outline-warning",
         event: {
             nextStage: 32,
             addedTime: 5,
@@ -417,7 +417,7 @@ level1 = [{
     {
         optionId: 3,
         title: "فقط تماشا می کنم",
-        color: "btn-outline-secondary",
+        color: "btn-outline-primary",
         event: {
             nextStage: 32,
             addedTime: 5,
@@ -448,7 +448,7 @@ level1 = [{
     {
         optionId: 2,
         title: "جلوی دیگران تحقیرش می کنی",
-        color: "btn-outline-secondary",
+        color: "btn-outline-info",
         event: {
             nextStage: 33,
             addedTime: 5,
@@ -470,7 +470,7 @@ level1 = [{
     {
         optionId: 4,
         title: "گذشت کنی",
-        color: "btn-outline-primary",
+        color: "btn-outline-danger",
         event: {
             nextStage: 33,
             addedTime: 5,
@@ -512,7 +512,7 @@ level1 = [{
     {
         optionId: 2,
         title: "بحث رو عوض کنی",
-        color: "btn-outline-secondary",
+        color: "btn-outline-danger",
         event: {
             nextStage: 35,
             addedTime: 5,
@@ -523,7 +523,7 @@ level1 = [{
     {
         optionId: 3,
         title: "هیچی نگی",
-        color: "btn-outline-secondary",
+        color: "btn-outline-warning",
         event: {
             nextStage: 35,
             addedTime: 5,
@@ -543,7 +543,7 @@ level1 = [{
     options: [{
         optionId: 1,
         title: "با بچه ها می ریم پارک",
-        color: "btn-outline-secondary",
+        color: "btn-outline-info",
         event: {
             nextStage: 40,
             addedTime: 180,
@@ -565,7 +565,7 @@ level1 = [{
     {
         optionId: 3,
         title: "میروم خونه",
-        color: "btn-outline-secondary",
+        color: "btn-outline-danger",
         event: {
             nextStage: 40,
             addedTime: 20,
@@ -585,7 +585,7 @@ level1 = [{
     options: [{
         optionId: 1,
         title: "گفتن حقیقت",
-        color: "btn-outline-secondary",
+        color: "btn-outline-info",
         event: {
             nextStage: 41,
             addedTime: 10,
@@ -596,7 +596,7 @@ level1 = [{
     {
         optionId: 2,
         title: "دروغ گفتن",
-        color: "btn-outline-secondary",
+        color: "btn-outline-danger",
         event: {
             nextStage: 41,
             addedTime: 10,
@@ -627,7 +627,7 @@ level1 = [{
     options: [{
         optionId: 1,
         title: "گفتن حقیقت",
-        color: "btn-outline-secondary",
+        color: "btn-outline-info",
         event: {
             nextStage: 45,
             addedTime: 10,
@@ -649,7 +649,7 @@ level1 = [{
     {
         optionId: 3,
         title: "سکوت کردن",
-        color: "btn-outline-secondary",
+        color: "btn-outline-danger",
         event: {
             nextStage: 45,
             addedTime: 0,
@@ -680,7 +680,7 @@ level1 = [{
     {
         optionId: 2,
         title: "پست در صفحه های اجتماعی",
-        color: "btn-outline-secondary",
+        color: "btn-outline-danger",
         event: {
             nextStage: 45,
             addedTime: 10,
@@ -691,7 +691,7 @@ level1 = [{
     {
         optionId: 3,
         title: "انجام تکالیف",
-        color: "btn-outline-secondary",
+        color: "btn-outline-info",
         event: {
             nextStage: 45,
             addedTime: 30,
@@ -702,7 +702,7 @@ level1 = [{
     {
         optionId: 4,
         title: "خوابیدن",
-        color: "btn-outline-secondary",
+        color: "btn-outline-warning",
         event: {
             nextStage: -1,
             addedTime: 0,
