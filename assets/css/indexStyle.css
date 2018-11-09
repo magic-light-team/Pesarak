@@ -13,5 +13,30 @@ button:disabled::after {
 
 div.card {
     background-position: center;
+    background-size: cover;
     min-height: 600px;
+}
+
+div.card-footer button {
+    background-color: #eaeaea99;
+}
+
+div.card-header {
+    background: #fff9;
+}
+
+div.card-header nav a {
+    font-weight: 800;
+    text-shadow: 2px 2px 8px #fff;
+}
+
+h5.card-title {
+    font-size: 2rem !important;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px #393838;
+}
+p.card-text{
+    font-size: 1.5rem !important;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px #393838;
 }

@@ -7,35 +7,35 @@ var currentStage;
 var disableOptions = [];
 var saveAllChoises = [];
 
-var stages = [
-	{
+var stages = [{
 		stageId: 1,
 		level: 1,
 		section: 1,
 		name: 'بیدار شدن',
 		desc: 'ساعت زنگ می زند. می خواهی چکار کنی؟',
+		background: "main.jpg",
 		options: [{
-			optionId: 1,
-			title: 'قطع زنگ و خوابیدن',
-			color: 'btn-outline-secondary',
-			event: {
-				nextStage: 2,
-				addedTime: 15,
-				addedEnergy: 20,
-				score: 10
+				optionId: 1,
+				title: 'قطع زنگ و خوابیدن',
+				color: 'btn-outline-secondary',
+				event: {
+					nextStage: 2,
+					addedTime: 15,
+					addedEnergy: 20,
+					score: 10
+				}
+			},
+			{
+				optionId: 2,
+				title: ' بیدار شدن و شستن و شو',
+				color: 'btn-outline-warning',
+				event: {
+					nextStage: 10,
+					addedTime: 5,
+					addedEnergy: 0,
+					score: 15
+				}
 			}
-		},
-		{
-			optionId: 2,
-			title: ' بیدار شدن و شستن و شو',
-			color: 'btn-outline-warning',
-			event: {
-				nextStage: 10,
-				addedTime: 5,
-				addedEnergy: 0,
-				score: 15
-			}
-		}
 		]
 	},
 	{
@@ -44,28 +44,29 @@ var stages = [
 		section: 1,
 		name: 'بیدار شدن',
 		desc: 'باز هم ساعت زنگ می زند. نمی خواهی بیدار شوی؟',
+		background: "main.jpg",
 		options: [{
-			optionId: 1,
-			title: 'قطع زنگ و خوابیدن',
-			color: 'btn-outline-secondary',
-			event: {
-				nextStage: 2,
-				addedTime: 15,
-				addedEnergy: 5,
-				score: 5
+				optionId: 1,
+				title: 'قطع زنگ و خوابیدن',
+				color: 'btn-outline-secondary',
+				event: {
+					nextStage: 2,
+					addedTime: 15,
+					addedEnergy: 5,
+					score: 5
+				}
+			},
+			{
+				optionId: 2,
+				title: 'بیدار شدن',
+				color: 'btn-outline-warning',
+				event: {
+					nextStage: 10,
+					addedTime: 5,
+					addedEnergy: 0,
+					score: 15
+				}
 			}
-		},
-		{
-			optionId: 2,
-			title: 'بیدار شدن',
-			color: 'btn-outline-warning',
-			event: {
-				nextStage: 10,
-				addedTime: 5,
-				addedEnergy: 0,
-				score: 15
-			}
-		}
 		]
 	},
 	{
@@ -74,39 +75,40 @@ var stages = [
 		section: 2,
 		name: 'آماده شدن',
 		desc: 'حالا که بیدار شدی می خواهی چکار کنی؟',
+		background: "main.jpg",
 		options: [{
-			optionId: 1,
-			title: 'مرتب کردن اتاق',
-			color: 'btn-outline-secondary',
-			event: {
-				nextStage: 11,
-				addedTime: 15,
-				addedEnergy: 5,
-				score: 5
+				optionId: 1,
+				title: 'مرتب کردن اتاق',
+				color: 'btn-outline-secondary',
+				event: {
+					nextStage: 11,
+					addedTime: 15,
+					addedEnergy: 5,
+					score: 5
+				}
+			},
+			{
+				optionId: 2,
+				title: 'خوردن صبحانه',
+				color: 'btn-outline-warning',
+				event: {
+					nextStage: 12,
+					addedTime: 5,
+					addedEnergy: 0,
+					score: 15
+				}
+			},
+			{
+				optionId: 2,
+				title: 'جمع کردن وسایل برای  مدرسه',
+				color: 'btn-outline-info',
+				event: {
+					nextStage: 13,
+					addedTime: 5,
+					addedEnergy: 0,
+					score: 15
+				}
 			}
-		},
-		{
-			optionId: 2,
-			title: 'خوردن صبحانه',
-			color: 'btn-outline-warning',
-			event: {
-				nextStage: 12,
-				addedTime: 5,
-				addedEnergy: 0,
-				score: 15
-			}
-		},
-		{
-			optionId: 2,
-			title: 'جمع کردن وسایل برای  مدرسه',
-			color: 'btn-outline-info',
-			event: {
-				nextStage: 13,
-				addedTime: 5,
-				addedEnergy: 0,
-				score: 15
-			}
-		}
 		]
 	}
 ];
@@ -158,6 +160,8 @@ function makeStage() {
 	$('#section').html(currentStage.section);
 	$('.card-title').html(currentStage.name);
 	$('.card-text').html(currentStage.desc);
+	$('div.card').css('background-image', "url('assets/image/" + currentStage.background + "')");
+
 
 	$('.card-footer').empty();
 	$.each(currentStage.options, function (index, value) {
@@ -195,7 +199,10 @@ function onClickOption(opId) {
 
 	stageId = event.nextStage;
 
-	saveAllChoises.push({ stageId: stageId, optionId: opId });
+	saveAllChoises.push({
+		stageId: stageId,
+		optionId: opId
+	});
 
 	var randomAlertColor = alertColor[Math.floor(Math.random() * alertColor.length)];
 

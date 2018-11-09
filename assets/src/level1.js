@@ -1,10 +1,10 @@
-level1 = [
-    {
+level1 = [{
         stageId: 1,
         level: 1,
         section: 1,
         name: "بیدار شدن",
         desc: "ساعت زنگ می زند. می خواهی چکار کنی؟",
+        background: "bed.jpg",
         options: [{
                 optionId: 1,
                 title: "قطع زنگ و خوابیدن",
@@ -35,6 +35,7 @@ level1 = [
         section: 1,
         name: "بیدار شدن",
         desc: "باز هم ساعت زنگ می زند. نمی خواهی بیدار شوی؟",
+        background: "bed.jpg",
         options: [{
                 optionId: 1,
                 title: "قطع زنگ و دوباره خوابیدن",
@@ -65,6 +66,7 @@ level1 = [
         section: 1,
         name: "بیدار شدن",
         desc: "دیگه فرصتی برای خوابیدن نداری، باید بیدار شوی!",
+        background: "bed.jpg",
         options: [{
                 optionId: 1,
                 title: "سریع بیدار شدن",
@@ -95,6 +97,7 @@ level1 = [
         section: 1,
         name: "مرتب کردن اتاق",
         desc: "دوست داری کجا رو مرتب کنی؟",
+        background: "room.jpg",
         options: [{
                 optionId: 1,
                 title: "مرتب کردن تخت",
@@ -131,7 +134,7 @@ level1 = [
             {
                 optionId: 4,
                 title: "بی خیال شدن",
-                color: "btn-outline-info",
+                color: "btn-outline-danger",
                 event: {
                     nextStage: 15,
                     addedTime: 0,
@@ -147,6 +150,7 @@ level1 = [
         section: 2,
         name: "جمع کردن وسایل مدرسه",
         desc: "چه کارهایی رو می خواهی انجام بدهی؟",
+        background: "roomtable.jpg",
         options: [{
                 optionId: 1,
                 title: "کنترل وسایل داخل کیف",
@@ -177,6 +181,7 @@ level1 = [
         section: 1,
         name: "خوردن صبحانه",
         desc: "چه چیز هایی دوست داری بخوری؟",
+        background: "breakfast.jpg",
         options: [{
                 optionId: 1,
                 title: "نوشیدن شیر",
@@ -189,7 +194,7 @@ level1 = [
                 }
             },
             {
-                optionId: 1,
+                optionId: 2,
                 title: "نوشیدن چای",
                 color: "btn-outline-secondary",
                 event: {
@@ -200,7 +205,7 @@ level1 = [
                 }
             },
             {
-                optionId: 1,
+                optionId: 3,
                 title: "خوردن لقمه",
                 color: "btn-outline-secondary",
                 event: {
@@ -229,6 +234,7 @@ level1 = [
         section: 2,
         name: "صحبت با والدین",
         desc: "پدر: مشقات رو نوشتی؟",
+        background: "breakfast.jpg",
         options: [{
                 optionId: 1,
                 title: "آره نوشتم",
@@ -270,6 +276,7 @@ level1 = [
         section: 2,
         name: "صحبت با والدین",
         desc: "پدر: اتاقت رو تمیز کردی؟",
+        background: "breakfast.jpg",
         options: [{
                 optionId: 1,
                 title: "آره کمی مرتب کردم",
@@ -311,6 +318,7 @@ level1 = [
         section: 2,
         name: "صحبت با والدین",
         desc: "مادر:امروز با دوستات میری بیرون بعد مردسه؟",
+        background: "breakfast.jpg",
         options: [{
                 optionId: 1,
                 title: "آره باهاشون میرم بیرون",
@@ -341,6 +349,7 @@ level1 = [
         section: 1,
         name: "در مدرسه",
         desc: "زنگ تفریح دوست داری چه کار کنی؟",
+        background: "school.jpg",
         options: [{
                 optionId: 1,
                 title: "بازی با بچه ها",
@@ -382,6 +391,7 @@ level1 = [
         section: 1,
         name: "در مدرسه",
         desc: "بین چند تا از بچه ها زد و خورد راه افتاده!",
+        background: "school.jpg",
         options: [{
                 optionId: 1,
                 title: "به مدیر یا ناظم خبر می دهم",
@@ -423,6 +433,7 @@ level1 = [
         section: 1,
         name: "در مدرسه",
         desc: "بعد از مدرسه دوست داری چه کار کنی؟",
+        background: "way.jpg",
         options: [{
                 optionId: 1,
                 title: "با بچه ها می ریم پارک",
