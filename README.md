@@ -31,7 +31,8 @@ a serius game
   - [x] add sound player
   - [ ] add event sound
   - [ ] add level music
-- [ ] ....
+- [ ] gameplay
+  - [ ] add choise in choise
 
 ## Suggest
 
