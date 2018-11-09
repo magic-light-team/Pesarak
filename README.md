@@ -6,6 +6,8 @@ a serius game
 
 [game link](https://magic-light-team.github.io/Pesarak/)
 
+[github](https://github.com/magic-light-team/Pesarak)
+
 ## Todo
 
 - [x] start making
