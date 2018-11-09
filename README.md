@@ -14,8 +14,9 @@ a serius game
 - [x] start making decition
 - [x] load level from file (json file)
 - [ ] Add Page
-  - [ ] make start screen
+  - [x] make start screen
   - [ ] make score page
+  - [ ] make about page
 - [ ] add graphic
   - [ ] add pic gif or image
   - [ ] add theme for any stage
