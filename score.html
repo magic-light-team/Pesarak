@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,17 @@
     <link rel="stylesheet" href="assets/css/indexStyle.css">
     <title>پسرک</title>
 </head>
+
 <body>
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="card text-center" style="min-height: 600px;">
+                <div class="card text-center text-white" style="min-height: 600px; background-image: url('assets/image/main.jpg')">
                     <div class="card-header">
                         <nav class="nav nav-pills nav-justified">
-                            <!-- <a class="nav-item nav-link active" href="#">Active</a> -->
-                            <!-- <a class="nav-item nav-link" href="#">Link</a> -->
                             <a class="nav-item nav-link disabled" href="#">
                                 <div>انرژی</div>
-                                <div id="energy">48</div>
+                                <div id="energy">0</div>
                             </a>
                             <a class="nav-item nav-link disabled" href="#">
                                 <div>امتیاز</div>
@@ -27,43 +27,40 @@
                             </a>
                             <a class="nav-item nav-link disabled" href="#">
                                 <div>ساعت</div>
-                                <div id="time">8:00</div>
+                                <div id="time">0:00</div>
                             </a>
                         </nav>
                     </div>
                     <div class="card-body align-items-end">
-                        <div class="row">
+
+                        <div id="content" class="row align-items-center" style="height: 400px">
                             <div class="col">
-                                <div class="progress">
-                                        <div id="timeBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%"></div>
-                                </div>
+                                <h5 class="card-title">یک روز دیگر تمام شد</h5>
+                                <p>ده درصد از زندگی‌تان وقایعی است که با آن روبه‌رو می‌شوید و نود درصدِ باقی‌مانده شیوه‌ی برخورد و پاسخ‌گویی به آنهاست</p>
+                                <p style="text-align: left;">لو هولتر</p>
+                                <p class="card-text" style="color: lightblue">امتیاز نهایی: 840</p>
+                                <p class="card-text" style="color: lightgreen">تعداد تصمیمات درست: 14</p>
+                                <p class="card-text" style="color: lightcoral">تعداد تصمیمات اشتباه: 6</p>
                             </div>
                         </div>
-                        <div class="row align-items-center" style="height: 400px">
-                            <div class="col">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.</p>
-                            </div>
-                        </div>
-                        <!-- <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a> -->
+
                     </div>
                     <div class="card-footer text-muted">
-                        <button type="button" class="selectable btn btn-outline-secondary btn-lg btn-block" onclick="onClickOption(1)">پاسخ
-                            اول</button>
-                        <button type="button" class="selectable btn btn-outline- btn-lg btn-block">پاسخ دوم</button>
-                        <!-- can use list group -->
+                        <a type="button" href="game.html" class="selectable btn btn-outline-secondary btn-lg btn-block">
+                            بازی
+                            دوباره </a>
+                        <a type="button" href="start.html" class="selectable btn btn-outline-primary btn-lg btn-block">
+                            منوی اصلی </a>
                     </div>
                 </div>
-    
+
             </div>
-            
+
         </div>
     </div>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery-3.3.1.min.js"></script>
 </body>
+
 </html>

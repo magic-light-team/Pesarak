@@ -11,6 +11,10 @@ button:disabled::after {
     content: "\2713 ";
 }
 
+.main-col {
+    min-width: 500px;
+}
+
 div.card {
     background-position: center;
     background-size: cover;
@@ -18,7 +22,7 @@ div.card {
 }
 
 div.card-footer button {
-    background-color: #eaeaea99;
+    background-color: #ffffff99;
 }
 
 div.card-header {

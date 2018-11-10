@@ -156,12 +156,15 @@ function makeStage() {
 	}
 	console.log(currentStage);
 
+	$('div.card').fadeOut(500)
+
 	$('#level').html(currentStage.level);
 	$('#section').html(currentStage.section);
 	$('#content .card-title').html(currentStage.name);
 	$('#content .card-text').html(currentStage.desc);
 	$('div.card').css('background-image', "url('assets/image/" + currentStage.background + "')");
-
+	
+	$('div.card').fadeIn(500)
 
 	$('.card-footer').empty();
 	$.each(currentStage.options, function (index, value) {
@@ -193,7 +196,9 @@ function onClickOption(opId) {
 		// add to disable option
 		disableOptions.push(opId);
 		console.log(disableOptions);
-	} else {
+	} else if(event.nextStage == -1){
+		window.location.href = 'score.html';
+	}else{
 		disableOptions = [];
 	}
 
