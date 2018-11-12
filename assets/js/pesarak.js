@@ -154,7 +154,7 @@ function makeStage() {
 		console.log('can not find stage')
 		return;
 	}
-	console.log(currentStage);
+	//console.log(currentStage);
 
 	$('div.card').fadeOut(500)
 
@@ -195,7 +195,7 @@ function onClickOption(opId) {
 	if (stageId == event.nextStage) {
 		// add to disable option
 		disableOptions.push(opId);
-		console.log(disableOptions);
+		//console.log(disableOptions);
 	} else if(event.nextStage == -1){
 		window.location.href = 'score.html';
 	}else{
