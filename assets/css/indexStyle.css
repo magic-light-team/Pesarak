@@ -44,3 +44,8 @@ div.card-header nav a {
     font-weight: bold;
     text-shadow: 2px 2px 8px #393838;
 }
+
+.team-card{
+    height:400;
+    color:black;
+}
