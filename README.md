@@ -4,9 +4,11 @@ a serius game
 
 ## link to game
 
-[game link](https://magic-light-team.github.io/Pesarak/)
+[Play Game Link](https://magic-light-team.github.io/Pesarak/)
 
-[github](https://github.com/magic-light-team/Pesarak)
+[Github Page](https://github.com/magic-light-team/Pesarak)
+
+[Game Design Tree view](https://magic-light-team.github.io/Pesarak/assets/src/mxgraph/see-level.html)
 
 ## Todo
 
