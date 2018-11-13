@@ -23,6 +23,7 @@ a serius game
   - [x] add theme for any stage
   - [ ] add image
 - [ ] add graphic effect
+  - [ ] add strock for text
   - [ ] level fade out & fade in
   - [ ] encrease score
   - [ ] choose effect
@@ -39,6 +40,7 @@ a serius game
   - [ ] add level music
 - [ ] gameplay
   - [ ] add choise in choise
+  - [ ] dont chose when energy is zero
 
 ## Suggest
 
