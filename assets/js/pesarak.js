@@ -300,24 +300,26 @@ function makeStage() {
 	}
 	//console.log(currentStage);
 
-	$('div.card').fadeOut(500)
+	$('div.card').fadeOut(500,function() {
 
-	$('#level').html(currentStage.level);
-	$('#section').html(currentStage.section);
-	$('#content .card-title').html(currentStage.name);
-	$('#content .card-text').html(currentStage.desc);
-	$('div.card').css('background-image', "url('assets/image/" + currentStage.background + "')");
+		// start change after fade out
 
-	$('div.card').fadeIn(500)
+		$('#level').html(currentStage.level);
+		$('#section').html(currentStage.section);
+		$('#content .card-title').html(currentStage.name);
+		$('#content .card-text').html(currentStage.desc);
+		$('div.card').css('background-image', "url('assets/image/" + currentStage.background + "')");
+		$('.card-footer').empty();
+		$.each(currentStage.options, function (index, value) {
+			var isDisable = disableOptions.includes(value.optionId) ? " disabled" : "";
+			$('.card-footer').append('<button type="button" class="btn ' + value.color +
+				' btn-lg btn-block"  data-option="' + value.optionId + '"' + isDisable + '>' + value.title +
+				'</button>');
+		})
 
-	$('.card-footer').empty();
-	$.each(currentStage.options, function (index, value) {
-		var isDisable = disableOptions.includes(value.optionId) ? " disabled" : "";
-		$('.card-footer').append('<button type="button" class="btn ' + value.color +
-			' btn-lg btn-block"  data-option="' + value.optionId + '"' + isDisable + '>' + value.title +
-			'</button>');
+		// fade in after change done
+		$('div.card').fadeIn(500)
 	})
-
 };
 
 const alertColor = ['alert-primary', 'alert-secondary', 'alert-success', 'alert-danger', 'alert-warning',

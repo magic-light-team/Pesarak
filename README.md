@@ -13,27 +13,27 @@ a serius game
 ## Todo
 
 - [x] start making
-- [x] start making decition
+- [x] start making decision
 - [x] load level from file (json file)
-- [ ] Add Page
+- [x] Add Page
   - [x] make start screen
   - [x] make score page
   - [x] make about page
-  - [ ] make it all in Ine page without refresh or change page
+  - [x] make it all in Ine page without refresh or change page - Single Page App
 - [ ] add graphic
   - [ ] add pic gif or image
   - [x] add theme for any stage
   - [ ] add image
 - [ ] add graphic effect
   - [ ] add strock for text
-  - [ ] level fade out & fade in
+  - [x] level fade out & fade in
   - [ ] encrease score
   - [ ] choose effect
   - [ ] add pop-up
   - [ ] add achievement
 - [ ] define win or loss element of game
 - [ ] level designer
-  - [ ] see level diagram
+  - [x] see level diagram
   - [ ] see tree view of level
   - [ ] make level designer
 - [ ] add sound effect
