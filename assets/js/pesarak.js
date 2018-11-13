@@ -314,7 +314,7 @@ function makeStage() {
 	$.each(currentStage.options, function (index, value) {
 		var isDisable = disableOptions.includes(value.optionId) ? " disabled" : "";
 		$('.card-footer').append('<button type="button" class="btn ' + value.color +
-			' btn-lg btn-block"  onclick="onClickOption(' + value.optionId + ')"' + isDisable + '>' + value.title +
+			' btn-lg btn-block"  data-option="' + value.optionId + '"' + isDisable + '>' + value.title +
 			'</button>');
 	})
 
@@ -324,7 +324,11 @@ const alertColor = ['alert-primary', 'alert-secondary', 'alert-success', 'alert-
 	'alert-info', 'alert-light', 'alert-dark'
 ];
 
-function onClickOption(opId) {
+$(document).on('click', 'button[data-option]', function(e) {
+	tapSFX = new sound('tap.wav');
+	tapSFX.play();
+
+	let opId = Number(e.target.getAttribute('data-option'));
 	var option = currentStage.options.find(x => x.optionId === opId);
 	if (!option) {
 		console.log('can not find option')
@@ -366,7 +370,7 @@ function onClickOption(opId) {
 	);
 
 	makeStage();
-}
+});
 
 function makeTime(time) {
 	var hour = Math.floor(time / 100);
