@@ -17,7 +17,7 @@ a serius game
 - [x] load level from file (json file)
 - [x] Add Page
   - [x] make start screen
-  - [x] make score page
+  - [x] make score page 
   - [x] make about page
   - [x] make it all in Ine page without refresh or change page - Single Page App
 - [ ] add graphic
@@ -31,18 +31,19 @@ a serius game
   - [ ] choose effect
   - [ ] add pop-up
   - [ ] add achievement
-- [ ] define win or loss element of game
 - [ ] level designer
   - [x] see level diagram
   - [ ] see tree view of level
   - [ ] make level designer
 - [ ] add sound effect
   - [x] add sound player
-  - [ ] add event sound
+  - [x] add event sound
   - [ ] add level music
 - [ ] gameplay
   - [ ] add choise in choise
-  - [ ] dont chose when energy is zero
+  - [ ] dont choose when energy is zero
+  - [ ] calculate score
+  - [ ] add some quete for score page
 
 ## Suggest
 
