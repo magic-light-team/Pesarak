@@ -6,6 +6,8 @@ a serius game
 
 [Play Game Link](https://magic-light-team.github.io/Pesarak/)
 
+[development style](https://magic-light-team.github.io/Pesarak/index.dev.html)
+
 [Github Page](https://github.com/magic-light-team/Pesarak)
 
 [Game Design Tree view](https://magic-light-team.github.io/Pesarak/assets/src/mxgraph/see-level.html)
@@ -63,5 +65,3 @@ a serius game
   - [ ] we use online [`MyJson`](http://myjson.com/)
   - [ ] or use back-end system
   - [x] use js file
-
-- [ ] see a big picture of choise and event
