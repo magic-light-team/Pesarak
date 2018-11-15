@@ -284,7 +284,7 @@ level1 = [{
         event: {
             nextStage: 27,
             addedTime: 5,
-            addedEnergy: 0,
+            addedEnergy: -5,
             score: 5
         }
     },
@@ -295,7 +295,7 @@ level1 = [{
         event: {
             nextStage: 27,
             addedTime: 5,
-            addedEnergy: 0,
+            addedEnergy: -10,
             score: 5
         }
     },
@@ -326,7 +326,7 @@ level1 = [{
         event: {
             nextStage: 30,
             addedTime: 5,
-            addedEnergy: 0,
+            addedEnergy: -5,
             score: 20
         }
     },
@@ -337,7 +337,7 @@ level1 = [{
         event: {
             nextStage: 30,
             addedTime: 5,
-            addedEnergy: 0,
+            addedEnergy: -5,
             score: 20
         }
     }
@@ -547,7 +547,7 @@ level1 = [{
         event: {
             nextStage: 40,
             addedTime: 180,
-            addedEnergy: -100,
+            addedEnergy: -40,
             score: 20
         }
     },
@@ -558,7 +558,7 @@ level1 = [{
         event: {
             nextStage: 40,
             addedTime: 120,
-            addedEnergy: -120,
+            addedEnergy: -50,
             score: 100
         }
     },
