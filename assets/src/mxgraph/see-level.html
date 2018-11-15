@@ -17,7 +17,7 @@
 
 	<!-- Loads and initializes the library -->
 	<script type="text/javascript" src="src/js/mxClient.js"></script>
-	<script src="../level1.js"></script>
+	<script src="../level.js"></script>
 	<!-- Example code -->
 	<script type="text/javascript">
 		// Program starts here. Creates a sample graph in the
@@ -79,7 +79,7 @@
 					var nodelist = [];
 					var relations = [];
 					//console.log(level1);
-					level1.forEach(function (stage, index) {
+					levelInfo.forEach(function (stage, index) {
 						//console.log(stage, index);
 						var node = graph.insertVertex(parent, null, stage.stageId, 0, 0, 80, 30);
 						nodelist.push({
