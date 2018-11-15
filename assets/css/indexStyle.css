@@ -8,7 +8,11 @@ button:disabled {
 }
 
 button:disabled::after {
-    content: "\2713 ";
+    content: "\2713"; /* checkmark */
+}
+
+button.notAllowed:disabled::after {
+    content: "\2573" !important; /* cross */
 }
 
 .main-col {

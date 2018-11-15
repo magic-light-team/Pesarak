@@ -33,7 +33,7 @@ a serius game
   - [ ] encrease score
   - [ ] choose effect
   - [ ] add pop-up
-  - [ ] add achievement
+  - [ ] add achievement -> with modal
 - [ ] level designer
   - [x] see level diagram
   - [ ] see tree view of level
@@ -65,3 +65,4 @@ a serius game
   - [ ] we use online [`MyJson`](http://myjson.com/)
   - [ ] or use back-end system
   - [x] use js file
+- [ ] utf8 problem in mxgraph

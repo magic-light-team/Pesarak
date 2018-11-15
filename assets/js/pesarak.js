@@ -174,9 +174,9 @@ function showScore() {
 
 function startGame() {
 
-	//TODO : start game efect
+	//TODO : start game effect
 
-	stages = level1;
+	stages = levelInfo;
 
 	$('.card-header').css('display', 'block');
 	$('.card-header').html(`
@@ -237,14 +237,33 @@ function makeStage() {
 		$('#content .card-text').html(currentStage.desc);
 		$('div.card').css('background-image', "url('assets/image/" + currentStage.background + "')");
 		$('.card-footer').empty();
-		$.each(currentStage.options, function (index, value) {
-			var notEnoughEnergy = value.event.addedEnergy + energy < 0;
-			var isDisable = (notEnoughEnergy || disableOptions.includes(value.optionId)) ? " disabled" : "";
-			var energyTitle = notEnoughEnergy ? " title='به اندازه کافی انرژی نداری!'" : "";
-			console.log('energyTitle',energyTitle);
-			$('.card-footer').append('<button type="button" class="btn ' + value.color +
-				' btn-lg btn-block"  data-option="' + value.optionId + '"' + isDisable + energyTitle + '>' + value.title +
-				'</button>');
+		$.each(currentStage.options, function (index, eventOption) {
+
+			var notEnoughEnergy = eventOption.event.addedEnergy + energy < 0;
+			var isDisable = (notEnoughEnergy || disableOptions.includes(eventOption.optionId)) ? " disabled" : "";
+			var btnTitle = notEnoughEnergy ? ' title="به اندازه کافی انرژی نداری!"' : "";
+
+			var otherClass = eventOption.color;
+
+			if (eventOption.event.needOptions) {
+				$.each(eventOption.event.needOptions, function (index, needOption) {
+					if (!saveAllChoises.includes({
+							stageId: needOption.stageId,
+							optionId: needOption.optionId
+						})) {
+						console.log('I have');
+						isDisable = " disabled";
+						otherClass += " notAllowed";
+						if (needOption.message) {
+							btnTitle = ' title="' + needOption.message + '"';
+						}
+					}
+				})
+			}
+
+			$('.card-footer').append('<button type="button" class="btn ' + otherClass +
+				' btn-lg btn-block"  data-option="' + eventOption.optionId + '"' + isDisable + btnTitle +
+				'>' + eventOption.title + '</button>');
 		})
 
 		// fade in after change done
