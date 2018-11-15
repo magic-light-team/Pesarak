@@ -41,7 +41,7 @@ level1 = [{
         title: "قطع زنگ و دوباره خوابیدن",
         color: "btn-outline-secondary",
         event: {
-            nextStage: 2,
+            nextStage: 3,
             addedTime: 15,
             addedEnergy: 5,
             score: 5
