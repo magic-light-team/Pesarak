@@ -379,7 +379,7 @@ let levelInfo:IStage[] = [{
                 title: "نشستن یک گوشه",
                 color: "btn-outline-danger",
                 event: {
-                    nextStage: 36,
+                    nextStage: 38,
                     addedTime: 15,
                     addedEnergy: 0,
                     score: 5
@@ -433,7 +433,7 @@ let levelInfo:IStage[] = [{
                 title: "گذشت کنی",
                 color: "btn-outline-danger",
                 event: {
-                    nextStage: 36,
+                    nextStage: 38,
                     addedTime: 5,
                     addedEnergy: 0,
                     score: 25
@@ -444,7 +444,7 @@ let levelInfo:IStage[] = [{
                 title: "از بازی بکشی کنار",
                 color: "btn-outline-primary",
                 event: {
-                    nextStage: 36,
+                    nextStage: 38,
                     addedTime: 5,
                     addedEnergy: 0,
                     score: -25
@@ -464,7 +464,7 @@ let levelInfo:IStage[] = [{
                 title: "به مدیر یا ناظم خبر می دهم",
                 color: "btn-outline-secondary",
                 event: {
-                    nextStage: 36,
+                    nextStage: 38,
                     addedTime: 5,
                     addedEnergy: -10,
                     score: 20
@@ -475,7 +475,7 @@ let levelInfo:IStage[] = [{
                 title: "سعی می کنم از هم جدایشان کنم",
                 color: "btn-outline-warning",
                 event: {
-                    nextStage: 36,
+                    nextStage: 38,
                     addedTime: 5,
                     addedEnergy: -10,
                     score: 10
@@ -486,7 +486,7 @@ let levelInfo:IStage[] = [{
                 title: "فقط تماشا می کنم",
                 color: "btn-outline-primary",
                 event: {
-                    nextStage: 36,
+                    nextStage: 38,
                     addedTime: 5,
                     addedEnergy: 0,
                     score: 0
@@ -506,7 +506,7 @@ let levelInfo:IStage[] = [{
                 title: "تو هم مثل دیگران پشت سرش صحبت می کنی",
                 color: "btn-outline-secondary",
                 event: {
-                    nextStage: 36,
+                    nextStage: 34,
                     addedTime: 5,
                     addedEnergy: -10,
                     score: -30
@@ -517,7 +517,7 @@ let levelInfo:IStage[] = [{
                 title: "بحث رو عوض کنی",
                 color: "btn-outline-danger",
                 event: {
-                    nextStage: 36,
+                    nextStage: 38,
                     addedTime: 5,
                     addedEnergy: -10,
                     score: 15
@@ -528,6 +528,91 @@ let levelInfo:IStage[] = [{
                 title: "هیچی نگی",
                 color: "btn-outline-warning",
                 event: {
+                    nextStage: 38,
+                    addedTime: 5,
+                    addedEnergy: 0,
+                    score: 0
+                }
+            }
+        ]
+    },
+    {
+        stageId: 34,
+        level: 4,
+        section: 4,
+        name: "در مدرسه",
+        desc: " احمد:چقدر تو مسیر مدرسه گدا زیاد شده. چقدر حال بهم زن شده خیابون",
+        background: "school.jpg",
+        options: [{
+                optionId: 1,
+                title: "موافقت می کنی",
+                color: "btn-outline-secondary",
+                event: {
+                    nextStage: 35,
+                    addedTime: 5,
+                    addedEnergy: -10,
+                    score: -10
+                }
+            },
+            {
+                optionId: 2,
+                title: "مخالفت می کنی",
+                color: "btn-outline-danger",
+                event: {
+                    nextStage: 35,
+                    addedTime: 5,
+                    addedEnergy: -10,
+                    score: 15
+                }
+            },
+            {
+                optionId: 3,
+                title: "سکوت می کنی",
+                color: "btn-outline-warning",
+                event: {
+                    nextStage: 35,
+                    addedTime: 5,
+                    addedEnergy: 0,
+                    score: 0
+                }
+            }
+        ]
+    },
+    {
+        stageId: 35,
+        level: 4,
+        section: 4,
+        name: "در مدرسه",
+        desc: ` سپهر: این بوفه چرا هزار تومن کشیده رو ساندویچا
+        دیگه مزه گوشت گربه گرفته تازه گرون ترشم کرده`,
+        background: "school.jpg",
+        options: [{
+                optionId: 1,
+                title: "موافقت می کنی",
+                color: "btn-outline-secondary",
+                event: {
+                    nextStage: 36,
+                    addedTime: 5,
+                    addedEnergy: -10,
+                    score: -10
+                }
+            },
+            {
+                optionId: 2,
+                title: "مخالفت می کنی",
+                color: "btn-outline-danger",
+                event: {
+                    nextStage: 36,
+                    addedTime: 5,
+                    addedEnergy: -10,
+                    score: 15
+                }
+            },
+            {
+                optionId: 3,
+                title: "سکوت می کنی",
+                color: "btn-outline-warning",
+                event: {
                     nextStage: 36,
                     addedTime: 5,
                     addedEnergy: 0,
@@ -536,9 +621,93 @@ let levelInfo:IStage[] = [{
             }
         ]
     },
-    
     {
         stageId: 36,
+        level: 4,
+        section: 4,
+        name: "در مدرسه",
+        desc: ` ماهان: بچه ها این کیف پول رو روی زمین پیدا کردم 
+        کی می خواد بریم خوراکی بخریم`,
+        background: "school.jpg",
+        options: [{
+                optionId: 1,
+                title: "موافقت می کنی",
+                color: "btn-outline-secondary",
+                event: {
+                    nextStage: 37,
+                    addedTime: 5,
+                    addedEnergy: -10,
+                    score: -30
+                }
+            },
+            {
+                optionId: 2,
+                title: "مخالفت می کنی",
+                color: "btn-outline-danger",
+                event: {
+                    nextStage: 37,
+                    addedTime: 5,
+                    addedEnergy: -10,
+                    score: 25
+                }
+            },
+            {
+                optionId: 3,
+                title: "سکوت می کنی",
+                color: "btn-outline-warning",
+                event: {
+                    nextStage: 37,
+                    addedTime: 5,
+                    addedEnergy: 0,
+                    score: 0
+                }
+            }
+        ]
+    },
+    {
+        stageId: 37,
+        level: 4,
+        section: 4,
+        name: "در مدرسه",
+        desc: ' علی:یه بچه سر کوچه دیدم پایه این پولامونو بزاربم رو هم یه تن ماهی بخریم براش؟',
+        background: "school.jpg",
+        options: [{
+                optionId: 1,
+                title: "موافقت می کنی",
+                color: "btn-outline-secondary",
+                event: {
+                    nextStage: 38,
+                    addedTime: 5,
+                    addedEnergy: -10,
+                    score: 30
+                }
+            },
+            {
+                optionId: 2,
+                title: "مخالفت می کنی",
+                color: "btn-outline-danger",
+                event: {
+                    nextStage: 38,
+                    addedTime: 5,
+                    addedEnergy: -10,
+                    score: 15
+                }
+            },
+            {
+                optionId: 3,
+                title: "سکوت می کنی",
+                color: "btn-outline-warning",
+                event: {
+                    nextStage: 38,
+                    addedTime: 5,
+                    addedEnergy: 0,
+                    score: 0
+                }
+            }
+        ]
+    },
+    {
+        stageId: 38,
         level: 4,
         section: 5,
         name: "سر کلاس",
@@ -549,7 +718,7 @@ let levelInfo:IStage[] = [{
                 title: "تکالیفت رو تحویل بدی",
                 color: "btn-outline-secondary",
                 event: {
-                    nextStage: 38,
+                    nextStage: 39,
                     addedTime: 5,
                     addedEnergy: -5,
                     score: 50,
@@ -565,7 +734,7 @@ let levelInfo:IStage[] = [{
                 title: "بگی تکلیف ننوشتم",
                 color: "btn-outline-warning",
                 event: {
-                    nextStage: 38,
+                    nextStage: 39,
                     addedTime: 5,
                     addedEnergy: -5,
                     score: 20
@@ -576,7 +745,7 @@ let levelInfo:IStage[] = [{
                 title: "به خاطر رفتن به دستشویی کلاس رو بپیچونی!",
                 color: "btn-outline-danger",
                 event: {
-                    nextStage: 38,
+                    nextStage: 39,
                     addedTime: 5,
                     addedEnergy: -10,
                     score: 10
@@ -585,7 +754,7 @@ let levelInfo:IStage[] = [{
         ]
     },
     {
-        stageId: 38,
+        stageId: 39,
         level: 4,
         section: 5,
         name: "در مدرسه",
