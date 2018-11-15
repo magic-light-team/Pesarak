@@ -21,7 +21,7 @@ a serius game
   - [x] make about page
   - [x] make it all in Ine page without refresh or change page - Single Page App
 - [ ] add graphic
-  - [ ] add pic gif or image
+  - [ ] add pic, gif or image between stage
   - [x] add theme for any stage
   - [ ] add image
 - [ ] add graphic effect
@@ -41,8 +41,10 @@ a serius game
   - [ ] add level music
 - [ ] gameplay
   - [ ] add choise in choise
-  - [ ] dont choose when energy is zero
+  - [x] dont choose when energy is zero
   - [ ] calculate score
+  - [ ] calculate good/bad answer/work
+  - [ ] calculate lie/truth answer
   - [ ] add some quete for score page
 
 ## Suggest
@@ -51,7 +53,8 @@ a serius game
 * convert project code to TypeScript
 * use Angular or React
 * using React native for mobile version
-* make level designer and save level in file (json file)
+* use redux and redux dev tools
+* see a big picture of choise and event
 
 ## Problems
 

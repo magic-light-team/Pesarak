@@ -1,0 +1,118 @@
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/image/pesarak.ico" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/indexStyle.css">
+    <title>پسرک</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="main-col col-md-6 col-sm-6 col-xs-12">
+                <div class="card text-center text-white" style="background-image: url('assets/image/main.jpg')">
+                    <div class="card-header align-items-center">
+                        <nav class="nav nav-pills nav-justified">
+                            <!-- <a class="nav-item nav-link active" href="#">Active</a> -->
+                            <!-- <a class="nav-item nav-link" href="#">Link</a> -->
+                            <a class="nav-item nav-link disabled" href="#">
+                                <div>انرژی</div>
+                                <div id="energy"></div>
+                            </a>
+                            <a class="nav-item nav-link disabled" href="#">
+                                <div>امتیاز</div>
+                                <div id="totalScore"></div>
+                            </a>
+                            <a class="nav-item nav-link disabled" href="#">
+                                <div>ساعت</div>
+                                <div id="time"></div>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="card-body align-items-end">
+                        <div id="content" class="row align-items-center" style="height: 400px">
+                            <div class="col">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                        <!-- <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+                    <div class="card-footer text-muted">
+                        <button type="button" class="selectable btn btn-outline-secondary btn-lg btn-block">
+                            </button>
+                        <button type="button" class="selectable btn btn-outline- btn-lg btn-block"> </button>
+                        <!-- can use list group -->
+                    </div>
+                </div>
+
+                <div class="jumbotron jumbotron-fluid" style="margin-top: 70px;">
+                    <div class="container text-right">
+                        <h4>اطلاعاتی که کاربر نمی بیند</h4>
+                        <table class="table table-hover">
+                            <tbody>
+                                <tr>
+                                    <td>level</td>
+                                    <td id="level">1</td>
+                                </tr>
+
+                                <tr>
+                                    <td>section</td>
+                                    <td id="section">1</td>
+                                </tr>
+                                <tr>
+                                    <td>stageId</td>
+                                    <td id="stageId">1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <!--
+                <div class="col-md-auto">
+                    Variable width content
+                </div>
+            -->
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/pesarak.js"></script>
+    <script src="assets/js/sound.js"></script>
+    <!--insert level data -->
+    <script src="assets/src/level1.js"></script>
+
+</body>
+
+</html>
