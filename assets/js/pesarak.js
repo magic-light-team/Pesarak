@@ -15,27 +15,27 @@ var stages = [{
 	desc: 'ساعت زنگ می زند. می خواهی چکار کنی؟',
 	background: "main.jpg",
 	options: [{
-			optionId: 1,
-			title: 'قطع زنگ و خوابیدن',
-			color: 'btn-outline-secondary',
-			event: {
-				nextStage: 2,
-				addedTime: 15,
-				addedEnergy: 20,
-				score: 10
-			}
-		},
-		{
-			optionId: 2,
-			title: ' بیدار شدن و شستن و شو',
-			color: 'btn-outline-warning',
-			event: {
-				nextStage: 10,
-				addedTime: 5,
-				addedEnergy: 0,
-				score: 15
-			}
+		optionId: 1,
+		title: 'قطع زنگ و خوابیدن',
+		color: 'btn-outline-secondary',
+		event: {
+			nextStage: 2,
+			addedTime: 15,
+			addedEnergy: 20,
+			score: 10
 		}
+	},
+	{
+		optionId: 2,
+		title: ' بیدار شدن و شستن و شو',
+		color: 'btn-outline-warning',
+		event: {
+			nextStage: 10,
+			addedTime: 5,
+			addedEnergy: 0,
+			score: 15
+		}
+	}
 	]
 }];
 
@@ -144,19 +144,48 @@ function showAbout() {
 	`);
 }
 
-function showScore() {
+const quotes = [
+	{ type: "chat", author: "آندره موروا", body: "مردمی که آرام تر و کندتر پیر می شوند آنهایی هستند که با فرهنگ و فرزانگی، دلیل و برهان زندگانی را درک نموده اند." },
+	{ type: "social-network", author: "آرتور شوپنهاور", body: "مادام که مجلات ادبی، معلومات مختصر و پیش پا افتاده ی مردمان معمولی را چاپ می کنند، به ویژه ابزار مکارانه ای برای سرقت وقت مردم زیبایی شناس هستند؛ وقتی که باید برای پیشرفت فرهنگ به شاهکارهای اصیل هنری اختصاص یابد." },
+	{ type: "home-work", author: "ولتر", body: "افرادی که بزرگترین خدمت را به دانش و فرهنگ نموده اند، نویسندگان و پژوهشگرانی بوده اند که در انزوا می زیسته اند و هرگز در گفتگوهای دانشگاهی شرکت نکرده و حقایق صد در صد اثبات نشده را در آکادمی ها ابراز نداشته اند." },
+	{ type: "other", author: "لو هولتر", body: "ده درصد از زندگی‌تان وقایعی است که با آن روبه‌رو می‌شوید و نود درصدِ باقی‌مانده شیوه‌ی برخورد و پاسخ‌گویی به آنهاست" },
+];
+
+function showScore(opId) {
 	//TODO : Calculate game Score
 	$('div.card').css('background-image', "url('assets/image/main.jpg')");
 	$('.card-header').css('display', 'block');
 	$('.card-header').html(`
 		<h4> نتیجه بازی </h4>
 	`);
+
+	var author = "";
+	var quote = "";
+
+	switch (opId) {
+		case 1:
+			author = quotes[0].author;
+			quote = quotes[0].body;
+			break;
+		case 2:
+			author = quotes[1].author;
+			quote = quotes[1].body;
+			break;
+		case 3:
+			author = quotes[2].author;
+			quote = quotes[2].body;
+			break;
+		default:
+			author = quotes[3].author;
+			quote = quotes[3].body;
+	}
+
 	$('.card-body').html(`
 	<div id="content" class="row align-items-center" style="height: 400px">
 		<div class="col">
 			<h5 class="card-title">یک روز دیگر تمام شد</h5>
-			<p>ده درصد از زندگی‌تان وقایعی است که با آن روبه‌رو می‌شوید و نود درصدِ باقی‌مانده شیوه‌ی برخورد و پاسخ‌گویی به آنهاست</p>
-			<p style="text-align: left;">لو هولتر</p>
+			<p>`+quote+`</p>
+			<p style="text-align: left;">`+ author +`</p>
 			<p class="card-text" style="color: lightblue">امتیاز نهایی: 840</p>
 			<p class="card-text" style="color: lightgreen">تعداد تصمیمات درست: 14</p>
 			<p class="card-text" style="color: lightcoral">تعداد تصمیمات اشتباه: 6</p>
@@ -248,9 +277,9 @@ function makeStage() {
 			if (eventOption.event.needOptions) {
 				$.each(eventOption.event.needOptions, function (index, needOption) {
 					if (!saveAllChoises.includes({
-							stageId: needOption.stageId,
-							optionId: needOption.optionId
-						})) {
+						stageId: needOption.stageId,
+						optionId: needOption.optionId
+					})) {
 						console.log('I have');
 						isDisable = " disabled";
 						otherClass += " notAllowed";
@@ -297,7 +326,7 @@ $(document).on('click', 'button[data-option]', function (e) {
 		//console.log(disableOptions);
 	} else if (event.nextStage == -1) {
 		//window.location.href = 'score.html';
-		showScore();
+		showScore(opId);
 	} else {
 		disableOptions = [];
 	}

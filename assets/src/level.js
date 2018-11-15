@@ -1,3 +1,4 @@
+
 var levelInfo = [{
         stageId: 1,
         level: 1,
@@ -377,7 +378,7 @@ var levelInfo = [{
                 title: "نشستن یک گوشه",
                 color: "btn-outline-danger",
                 event: {
-                    nextStage: 34,
+                    nextStage: 36,
                     addedTime: 15,
                     addedEnergy: 0,
                     score: 5
@@ -718,7 +719,7 @@ var levelInfo = [{
                 title: "چت با دوستان",
                 color: "btn-outline-secondary",
                 event: {
-                    nextStage: 45,
+                    nextStage: -1,
                     addedTime: 10,
                     addedEnergy: -10,
                     score: 20
@@ -729,7 +730,7 @@ var levelInfo = [{
                 title: "پست در صفحه های اجتماعی",
                 color: "btn-outline-danger",
                 event: {
-                    nextStage: 45,
+                    nextStage: -1,
                     addedTime: 10,
                     addedEnergy: -10,
                     score: 20
@@ -740,7 +741,7 @@ var levelInfo = [{
                 title: "انجام تکالیف",
                 color: "btn-outline-info",
                 event: {
-                    nextStage: 45,
+                    nextStage: -1,
                     addedTime: 30,
                     addedEnergy: -30,
                     score: 100

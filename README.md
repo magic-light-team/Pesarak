@@ -50,7 +50,7 @@ a serius game
   - [ ] calculate score
   - [ ] calculate good/bad answer/work
   - [ ] calculate lie/truth answer
-  - [ ] add some quete for score page
+  - [x] add some quotes for score page
 
 ## Suggest
 
