@@ -12,6 +12,8 @@ a serius game
 
 [Game Design Tree view](https://magic-light-team.github.io/Pesarak/assets/src/mxgraph/see-level.html)
 
+[Game Design Tree view](https://magic-light-team.github.io/Pesarak/assets/src/mxgraph/see-level2.html)
+
 ## Todo
 
 - [x] start making
