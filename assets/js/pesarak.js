@@ -15,103 +15,29 @@ var stages = [{
 	desc: 'ساعت زنگ می زند. می خواهی چکار کنی؟',
 	background: "main.jpg",
 	options: [{
-		optionId: 1,
-		title: 'قطع زنگ و خوابیدن',
-		color: 'btn-outline-secondary',
-		event: {
-			nextStage: 2,
-			addedTime: 15,
-			addedEnergy: 20,
-			score: 10
+			optionId: 1,
+			title: 'قطع زنگ و خوابیدن',
+			color: 'btn-outline-secondary',
+			event: {
+				nextStage: 2,
+				addedTime: 15,
+				addedEnergy: 20,
+				score: 10
+			}
+		},
+		{
+			optionId: 2,
+			title: ' بیدار شدن و شستن و شو',
+			color: 'btn-outline-warning',
+			event: {
+				nextStage: 10,
+				addedTime: 5,
+				addedEnergy: 0,
+				score: 15
+			}
 		}
-	},
-	{
-		optionId: 2,
-		title: ' بیدار شدن و شستن و شو',
-		color: 'btn-outline-warning',
-		event: {
-			nextStage: 10,
-			addedTime: 5,
-			addedEnergy: 0,
-			score: 15
-		}
-	}
 	]
-},
-{
-	stageId: 2,
-	level: 1,
-	section: 1,
-	name: 'بیدار شدن',
-	desc: 'باز هم ساعت زنگ می زند. نمی خواهی بیدار شوی؟',
-	background: "main.jpg",
-	options: [{
-		optionId: 1,
-		title: 'قطع زنگ و خوابیدن',
-		color: 'btn-outline-secondary',
-		event: {
-			nextStage: 2,
-			addedTime: 15,
-			addedEnergy: 5,
-			score: 5
-		}
-	},
-	{
-		optionId: 2,
-		title: 'بیدار شدن',
-		color: 'btn-outline-warning',
-		event: {
-			nextStage: 10,
-			addedTime: 5,
-			addedEnergy: 0,
-			score: 15
-		}
-	}
-	]
-},
-{
-	stageId: 10,
-	level: 1,
-	section: 2,
-	name: 'آماده شدن',
-	desc: 'حالا که بیدار شدی می خواهی چکار کنی؟',
-	background: "main.jpg",
-	options: [{
-		optionId: 1,
-		title: 'مرتب کردن اتاق',
-		color: 'btn-outline-secondary',
-		event: {
-			nextStage: 11,
-			addedTime: 15,
-			addedEnergy: 5,
-			score: 5
-		}
-	},
-	{
-		optionId: 2,
-		title: 'خوردن صبحانه',
-		color: 'btn-outline-warning',
-		event: {
-			nextStage: 12,
-			addedTime: 5,
-			addedEnergy: 0,
-			score: 15
-		}
-	},
-	{
-		optionId: 2,
-		title: 'جمع کردن وسایل برای  مدرسه',
-		color: 'btn-outline-info',
-		event: {
-			nextStage: 13,
-			addedTime: 5,
-			addedEnergy: 0,
-			score: 15
-		}
-	}
-	]
-}
-];
+}];
 
 $(document).ready(function () {
 	//console.log('level1',level1);
@@ -218,8 +144,9 @@ function showAbout() {
 	`);
 }
 
-function showScore(){
+function showScore() {
 	//TODO : Calculate game Score
+	$('div.card').css('background-image', "url('assets/image/main.jpg')");
 	$('.card-header').css('display', 'block');
 	$('.card-header').html(`
 		<h4> نتیجه بازی </h4>
@@ -300,7 +227,7 @@ function makeStage() {
 	}
 	//console.log(currentStage);
 
-	$('div.card').fadeOut(500,function() {
+	$('div.card').fadeOut(500, function () {
 
 		// start change after fade out
 
@@ -311,9 +238,12 @@ function makeStage() {
 		$('div.card').css('background-image', "url('assets/image/" + currentStage.background + "')");
 		$('.card-footer').empty();
 		$.each(currentStage.options, function (index, value) {
-			var isDisable = disableOptions.includes(value.optionId) ? " disabled" : "";
+			var notEnoughEnergy = value.event.addedEnergy + energy < 0;
+			var isDisable = (notEnoughEnergy || disableOptions.includes(value.optionId)) ? " disabled" : "";
+			var energyTitle = notEnoughEnergy ? " title='به اندازه کافی انرژی نداری!'" : "";
+			console.log('energyTitle',energyTitle);
 			$('.card-footer').append('<button type="button" class="btn ' + value.color +
-				' btn-lg btn-block"  data-option="' + value.optionId + '"' + isDisable + '>' + value.title +
+				' btn-lg btn-block"  data-option="' + value.optionId + '"' + isDisable + energyTitle + '>' + value.title +
 				'</button>');
 		})
 
@@ -326,7 +256,7 @@ const alertColor = ['alert-primary', 'alert-secondary', 'alert-success', 'alert-
 	'alert-info', 'alert-light', 'alert-dark'
 ];
 
-$(document).on('click', 'button[data-option]', function(e) {
+$(document).on('click', 'button[data-option]', function (e) {
 	tapSFX = new sound('tap.wav');
 	tapSFX.play();
 

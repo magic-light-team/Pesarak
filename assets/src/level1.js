@@ -527,7 +527,7 @@ level1 = [{
         event: {
             nextStage: 35,
             addedTime: 5,
-            addedEnergy: -10,
+            addedEnergy: 0,
             score: 0
         }
     }
@@ -664,7 +664,7 @@ level1 = [{
     level: 5,
     section: 5,
     name: "در خانه",
-    desc: "مادر:دوستات رو دیدی؟",
+    desc: "دیگه آفتاب غروب کرده، دوست داری الان چه کار کنی؟",
     background: "room.jpg",
     options: [{
         optionId: 1,
