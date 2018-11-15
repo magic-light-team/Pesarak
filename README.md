@@ -15,15 +15,16 @@ a serius game
 - [x] start making
 - [x] start making decision
 - [x] load level from file (json file)
-- [x] Add Page
+- [ ] Add Page
   - [x] make start screen
-  - [x] make score page 
+  - [x] make score page
   - [x] make about page
   - [x] make it all in Ine page without refresh or change page - Single Page App
+  - [ ] add website address in aboat page
 - [ ] add graphic
-  - [ ] add pic, gif or image between stage
+  - [ ] add pic, gif or image between stage depend on choose
   - [x] add theme for any stage
-  - [ ] add image
+  - [ ] add image for button
 - [ ] add graphic effect
   - [ ] add strock for text
   - [x] level fade out & fade in
