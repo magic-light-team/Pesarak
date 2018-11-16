@@ -755,6 +755,7 @@ var levelInfo = [{
         name: "در مدرسه",
         desc: "بعد از مدرسه دوست داری چه کار کنی؟",
         background: "way.jpg",
+        setGameTime: 1400,
         options: [{
                 optionId: 1,
                 title: "با بچه ها می ریم پارک",
@@ -881,6 +882,7 @@ var levelInfo = [{
         name: "در خانه",
         desc: "دیگه آفتاب غروب کرده، دوست داری الان چه کار کنی؟",
         background: "room.jpg",
+        setGameTime: 2100,
         options: [{
                 optionId: 1,
                 title: "چت با دوستان",

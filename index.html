@@ -46,7 +46,7 @@
                     </div>
                     <div class="card-footer text-muted">
                         <button type="button" class="selectable btn btn-outline-secondary btn-lg btn-block">
-                            </button>
+                        </button>
                         <button type="button" class="selectable btn btn-outline- btn-lg btn-block"> </button>
                         <!-- can use list group -->
                     </div>
@@ -85,7 +85,7 @@
     </div>
 
     <!-- modal -->
-    <div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -106,12 +106,37 @@
     </div>
     <!-- modal -->
 
+    <!-- achievment modal -->
+    <div id="achievmentModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content" style="direction: rtl">
+                <div class="modal-header">
+                    <h5 class="modal-title">آفرین! یه دستاورد جدید</h5>
+                    <button type="button" class="close float-left" data-dismiss="modal" aria-label="Close" style="margin: -1rem auto -1rem -1rem;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid" >
+                        <div class="row">
+                            <div class="col-md-5"><img src="assets/image/svg/bed.svg" /></div>
+                            <div class="col-md-7 align-self-center ">اسم دستاورد</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- achievment modal -->
+
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/pesarak.js"></script>
     <script src="assets/js/sound.js"></script>
     <!--insert level data -->
     <script src="assets/src/level.js"></script>
+    <script src="assets/src/achievmen.js"></script>
 
 </body>
 

@@ -46,6 +46,8 @@ $(document).ready(function () {
 
 	showStartMenu();
 
+	//$('#achievmentModal').modal('show')
+
 	//read level from file
 	// $.getJSON("level/level1.json", function (data) {
 	//     console.log(value);
@@ -238,6 +240,9 @@ function startGame() {
 	time = 700;
 	energy = 50;
 	stageId = 1;
+
+	saveAllChoises = [];
+
 	makeStage();
 };
 
@@ -320,6 +325,10 @@ $(document).on('click', 'button[data-option]', function (e) {
 	time += event.addedTime;
 	energy += event.addedEnergy;
 
+	if (event.setGameTime) {
+		time = event.setGameTime;
+	}
+
 	if (stageId == event.nextStage) {
 		// add to disable option
 		disableOptions.push(opId);
@@ -366,6 +375,7 @@ function makeTime(time) {
 		return hour + ':0' + min;
 	return hour + ':' + min;
 };
+
 //$('#myModal').modal(options)
 //$('#myModal').modal('show')
 //$('#myModal').modal('hide')
