@@ -36,7 +36,8 @@ export interface IAchievment {
     achievmentId: number,
     chooses: IChoose[],
     name: string,
-    pic?: string
+    pic?: string,
+    desc?: string
 }
 
 export interface IChoose {

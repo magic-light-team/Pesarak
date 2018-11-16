@@ -379,6 +379,7 @@ function makeTime(time) {
 	return hour + ':' + min;
 };
 
+// bad performance 
 function checkAchievment(stId, opId) {
 	console.log('start check', stId, opId);
 
@@ -386,8 +387,9 @@ function checkAchievment(stId, opId) {
 	$.each(achievments, function name(index, achievment) {
 		if (achievment.chooses.find(x => x.stageId === stId && x.optionId === opId)) {
 			// check other choose
-			var needChooses = achievment.chooses;
-			needChooses.pop({ stageId: stId, optionId: opId });
+			var needChooses = achievment.chooses.slice(0);
+
+			needChooses = needChooses.filter(x => x.stageId !== stId || x.optionId !== opId);
 			var newAchievment = false;
 
 			if (needChooses.length === 0) {
@@ -395,15 +397,16 @@ function checkAchievment(stId, opId) {
 			} else {
 				$.each(saveAllChoises, function name(index, choise) {
 					if (needChooses.find(x => x.stageId === choise.stageId && x.optionId === choise.optionId)) {
-						needChooses.pop({ stageId: choise.stageId, optionId: choise.optionId });
-
+						needChooses = needChooses.filter(x => x.stageId !== choise.stageId || x.optionId !== choise.optionId);
 						if (needChooses.length === 0) {
 							newAchievment = true;
+							return false; 
 						}
 					}
 				})
 			}
-			if (newAchievment && !earnedAchievments.includes(achievment)) {
+
+			if (newAchievment && !earnedAchievments.find(x => x.achievmentId === achievment.achievmentId)) {
 				showAchivement(achievment);
 				earnedAchievments.push(achievment)
 			}
