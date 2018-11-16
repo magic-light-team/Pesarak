@@ -6,6 +6,7 @@ var stageId;
 var currentStage;
 var disableOptions = [];
 var saveAllChoises = [];
+var earnedAchievments = [];
 
 var stages = [{
 	stageId: 1,
@@ -340,12 +341,14 @@ $(document).on('click', 'button[data-option]', function (e) {
 		disableOptions = [];
 	}
 
-	stageId = event.nextStage;
-
 	saveAllChoises.push({
 		stageId: stageId,
 		optionId: opId
 	});
+
+	checkAchievment(stageId, opId);
+
+	stageId = event.nextStage;
 
 	var randomAlertColor = alertColor[Math.floor(Math.random() * alertColor.length)];
 
@@ -375,6 +378,46 @@ function makeTime(time) {
 		return hour + ':0' + min;
 	return hour + ':' + min;
 };
+
+function checkAchievment(stId, opId) {
+	console.log('start check', stId, opId);
+
+	//find achievment whit this stageId,optionIg
+	$.each(achievments, function name(index, achievment) {
+		if (achievment.chooses.find(x => x.stageId === stId && x.optionId === opId)) {
+			// check other choose
+			var needChooses = achievment.chooses;
+			needChooses.pop({ stageId: stId, optionId: opId });
+			var newAchievment = false;
+
+			if (needChooses.length === 0) {
+				newAchievment = true;
+			} else {
+				$.each(saveAllChoises, function name(index, choise) {
+					if (needChooses.find(x => x.stageId === choise.stageId && x.optionId === choise.optionId)) {
+						needChooses.pop({ stageId: choise.stageId, optionId: choise.optionId });
+
+						if (needChooses.length === 0) {
+							newAchievment = true;
+						}
+					}
+				})
+			}
+			if (newAchievment && !earnedAchievments.includes(achievment)) {
+				showAchivement(achievment);
+				earnedAchievments.push(achievment)
+			}
+		}
+	});
+	//achievments.includes()	
+}
+
+function showAchivement(achievment) {
+	$('#achievmentModal img').attr('src', achievment.pic)
+	$('#achievmentModal #achievmentName').html(achievment.name)
+	$('#achievmentModal').modal('show');
+}
+
 
 //$('#myModal').modal(options)
 //$('#myModal').modal('show')
