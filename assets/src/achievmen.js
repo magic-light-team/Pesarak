@@ -13,13 +13,13 @@ var achievments = [{
     }, {
         achievmentId: 3,
         chooses: [],
-        name: "",
+        name: "چاخان",
         pic: "",
         desc: "اولین دروغ"
     }, {
         achievmentId: 4,
         chooses: [],
-        name: "",
+        name: "فراری",
         pic: "",
         desc: "فرار کردن از کلاس"
     }, {
