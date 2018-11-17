@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 var levelInfo = [{
         stageId: 1,
         level: 1,

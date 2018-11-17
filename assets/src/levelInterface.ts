@@ -37,7 +37,8 @@ export interface IAchievment {
     chooses: IChoose[],
     name: string,
     pic?: string,
-    desc?: string
+    desc?: string,
+    rebuild?: boolean
 }
 
 export interface IChoose {

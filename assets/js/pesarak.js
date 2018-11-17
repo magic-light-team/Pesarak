@@ -6,7 +6,11 @@ var stageId;
 var currentStage;
 var disableOptions = [];
 var saveAllChoises = [];
+
+var remainAchievments = [];
 var earnedAchievments = [];
+
+var exports = {}; // type script problem
 
 var stages = [{
 	stageId: 1,
@@ -47,7 +51,13 @@ $(document).ready(function () {
 
 	showStartMenu();
 
+	//remainAchievments = achievments.slice(0); // clone from file
+	//remainAchievments = Object.assign({}, achievments);
+	remainAchievments = JSON.parse(JSON.stringify(achievments));
+	earnedAchievments = [];
+
 	//$('#achievmentModal').modal('show')
+	//showAchivement(achievments[1])
 
 	//read level from file
 	// $.getJSON("level/level1.json", function (data) {
@@ -207,6 +217,7 @@ function showScore(opId, totalScore) {
 function startGame() {
 
 	//TODO : start game effect
+	rebuildRemainAchievment();
 
 	stages = levelInfo;
 
@@ -326,6 +337,10 @@ $(document).on('click', 'button[data-option]', function (e) {
 	time += event.addedTime;
 	energy += event.addedEnergy;
 
+	if (energy === 0) {
+		showAchivement(achievments.find(ach => ach.achievmentId == 5));
+	}
+
 	if (event.setGameTime) {
 		time = event.setGameTime;
 	}
@@ -381,34 +396,16 @@ function makeTime(time) {
 
 // bad performance 
 function checkAchievment(stId, opId) {
-	console.log('start check', stId, opId);
 
 	//find achievment whit this stageId,optionIg
-	$.each(achievments, function name(index, achievment) {
+	$.each(remainAchievments, function name(index, achievment) {
 		if (achievment.chooses.find(x => x.stageId === stId && x.optionId === opId)) {
-			// check other choose
-			var needChooses = achievment.chooses.slice(0);
 
-			needChooses = needChooses.filter(x => x.stageId !== stId || x.optionId !== opId);
-			var newAchievment = false;
+			achievment.chooses = achievment.chooses.filter(x => x.stageId !== stId || x.optionId !== opId);
 
-			if (needChooses.length === 0) {
-				newAchievment = true;
-			} else {
-				$.each(saveAllChoises, function name(index, choise) {
-					if (needChooses.find(x => x.stageId === choise.stageId && x.optionId === choise.optionId)) {
-						needChooses = needChooses.filter(x => x.stageId !== choise.stageId || x.optionId !== choise.optionId);
-						if (needChooses.length === 0) {
-							newAchievment = true;
-							return false; 
-						}
-					}
-				})
-			}
-
-			if (newAchievment && !earnedAchievments.find(x => x.achievmentId === achievment.achievmentId)) {
+			if (achievment.chooses.length === 0 &&
+				!earnedAchievments.find(x => x.achievmentId === achievment.achievmentId)) {
 				showAchivement(achievment);
-				earnedAchievments.push(achievment)
 			}
 		}
 	});
@@ -416,11 +413,26 @@ function checkAchievment(stId, opId) {
 }
 
 function showAchivement(achievment) {
+	remainAchievments = remainAchievments.filter(ach => ach.achievmentId !== achievment.achievmentId);
+
+	if (earnedAchievments.find(x => x.achievmentId === achievment.achievmentId)) {
+		console.log('earn this achievment before!');
+		return;
+	}
+
+	earnedAchievments.push(achievment);
 	$('#achievmentModal img').attr('src', achievment.pic)
 	$('#achievmentModal #achievmentName').html(achievment.name)
 	$('#achievmentModal').modal('show');
 }
 
+function rebuildRemainAchievment() {
+	$.each(remainAchievments, function name(index, achievment) {
+		if (achievment.rebuild) {
+			achievment.chooses = JSON.parse(JSON.stringify(achievments.find(x => x.achievmentId == achievment.achievmentId).chooses));
+		}
+	});
+}
 
 //$('#myModal').modal(options)
 //$('#myModal').modal('show')
