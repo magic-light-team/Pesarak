@@ -19,7 +19,12 @@ body {
 
 button:disabled {
     text-decoration: line-through;
-    cursor: not-allowed;
+	cursor: not-allowed;
+	transition: none;
+}
+
+button:disabled:hover {
+	text-decoration: line-through;
 }
 
 button:disabled::after {
@@ -52,6 +57,15 @@ button.notAllowed:disabled::after {
 .buttons-wrapper .btn {
 	flex: 0 0 265px;
 	margin-bottom: 10px;
+	color: white;
+	box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+	background-image: linear-gradient(to right, #0062ff 0%, #00a1ff 50%, #0062ff 100%);
+	background-size: 200% auto;
+	transition: 0.3s;
+}
+
+.buttons-wrapper .btn:not(:disabled):hover {
+	background-position: right center;
 }
 
 .buttons-wrapper .btn-wide {

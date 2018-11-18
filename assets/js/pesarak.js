@@ -421,6 +421,8 @@ function showAchivement(achievment) {
 	}
 
 	earnedAchievments.push(achievment);
+	achievementSFX = new sound('achievement.mp3');
+	achievementSFX.play();
 	$('#achievmentModal img').attr('src', achievment.pic)
 	$('#achievmentModal #achievmentName').html(achievment.name)
 	$('#achievmentModal').modal('show');
