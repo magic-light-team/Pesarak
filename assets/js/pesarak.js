@@ -50,7 +50,8 @@ $(document).ready(function () {
 	//startGame();
 
 	showStartMenu();
-
+	achievementSFX = new sound('achievement.mp3');
+	tapSFX = new sound('tap.wav');
 	//remainAchievments = achievments.slice(0); // clone from file
 	//remainAchievments = Object.assign({}, achievments);
 	remainAchievments = JSON.parse(JSON.stringify(achievments));
@@ -322,7 +323,6 @@ const alertColor = ['alert-primary', 'alert-secondary', 'alert-success', 'alert-
 ];
 
 $(document).on('click', 'button[data-option]', function (e) {
-	tapSFX = new sound('tap.wav');
 	tapSFX.play();
 
 	let opId = Number(e.target.getAttribute('data-option'));
@@ -421,7 +421,6 @@ function showAchivement(achievment) {
 	}
 
 	earnedAchievments.push(achievment);
-	achievementSFX = new sound('achievement.mp3');
 	achievementSFX.play();
 	$('#achievmentModal img').attr('src', achievment.pic)
 	$('#achievmentModal #achievmentName').html(achievment.name)
