@@ -44,7 +44,7 @@ $(document).ready(function () {
 
 function showStartMenu() {
 	$('div.card').css('background-image', "url('assets/image/main.jpg')");
-	$('.card-header').toggleClass('hidden');
+	$('.card-header').addClass('hidden');
 	$('.card-body').html(`
 		<div class="row align-items-center">
 			<div class="col">
@@ -189,7 +189,7 @@ function startGame() {
 
 	stages = levelInfo;
 
-	$('.card-header').css('display', 'block');
+	$('.card-header').removeClass('hidden');
 	$('.card-header').html(`
 		<nav class="nav nav-pills nav-justified">
 			<div class="nav-item nav-link">

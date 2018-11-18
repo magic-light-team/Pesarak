@@ -4,6 +4,8 @@ body {
 
 .hidden {
 	display: none;
+	visibility: hidden;
+	opacity: 0;
 }
 
 .board {
@@ -37,8 +39,9 @@ button.notAllowed:disabled::after {
     background-position: center;
     background-size: cover;
 	min-height: 800px;
-	border-radius: 0;
-	border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
 }
 
 .buttons-wrapper {
