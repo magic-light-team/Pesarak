@@ -1,4 +1,4 @@
-<html lang="fa">
+<html lang="fa" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -14,25 +14,23 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="main-col col-md-6 col-sm-6 col-xs-12">
-                <div class="card text-center text-white" style="background-image: url('assets/image/main.jpg')">
-                    <div class="card-header align-items-center">
-                        <nav class="nav nav-pills nav-justified">
-                            <!-- <a class="nav-item nav-link active" href="#">Active</a> -->
-                            <!-- <a class="nav-item nav-link" href="#">Link</a> -->
-                            <a class="nav-item nav-link disabled" href="#">
-                                <div>انرژی</div>
-                                <div id="energy"></div>
-                            </a>
-                            <a class="nav-item nav-link disabled" href="#">
-                                <div>امتیاز</div>
-                                <div id="totalScore"></div>
-                            </a>
-                            <a class="nav-item nav-link disabled" href="#">
-                                <div>ساعت</div>
-                                <div id="time"></div>
-                            </a>
-                        </nav>
-                    </div>
+				<div class="card text-center text-white" style="background-image: url('assets/image/main.jpg')">
+					<div class="board card-header align-items-center">
+						<nav class="nav nav-pills nav-justified">
+							<div class="nav-item nav-link">
+								<div>انرژی</div>
+								<div id="energy"></div>
+							</div>
+							<div class="nav-item nav-link">
+								<div>امتیاز</div>
+								<div id="totalScore"></div>
+							</div>
+							<div class="nav-item nav-link">
+								<div>ساعت</div>
+								<div id="time"></div>
+							</div>
+						</nav>
+					</div>
                     <div class="card-body align-items-end">
                         <div id="content" class="row align-items-center" style="height: 400px">
                             <div class="col">
@@ -40,17 +38,10 @@
                                 <p class="card-text"></p>
                             </div>
                         </div>
-                        <!-- <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
-                    <div class="card-footer text-muted">
-                        <button type="button" class="selectable btn btn-outline-secondary btn-lg btn-block">
-                        </button>
-                        <button type="button" class="selectable btn btn-outline- btn-lg btn-block"> </button>
-                        <!-- can use list group -->
-                    </div>
-                </div>
+				</div>
+				<div class="buttons-wrapper">
+				</div>
 
                 <div class="jumbotron jumbotron-fluid" style="margin-top: 70px;display: none;">
                     <div class="container text-right">
@@ -76,35 +67,8 @@
                     </div>
                 </div>
             </div>
-            <!--
-                <div class="col-md-auto">
-                    Variable width content
-                </div>
-            -->
         </div>
     </div>
-
-    <!-- modal -->
-    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- modal -->
 
     <!-- achievment modal -->
     <div id="achievmentModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">

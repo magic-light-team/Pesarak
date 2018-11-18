@@ -22,7 +22,7 @@ var stages = [{
 	options: [{
 		optionId: 1,
 		title: 'قطع زنگ و خوابیدن',
-		color: 'btn-outline-secondary',
+		color: 'btn',
 		event: {
 			nextStage: 2,
 			addedTime: 15,
@@ -33,7 +33,7 @@ var stages = [{
 	{
 		optionId: 2,
 		title: ' بیدار شدن و شستن و شو',
-		color: 'btn-outline-warning',
+		color: 'btn',
 		event: {
 			nextStage: 10,
 			addedTime: 5,
@@ -75,8 +75,8 @@ $(document).ready(function () {
 
 function showStartMenu() {
 	$('div.card').css('background-image', "url('assets/image/main.jpg')");
-	$('.card-header').css('display', 'none');
-	$('.card-footer').css('display', 'none');
+	$('.card-header').toggleClass('hidden');
+	$('.buttons-wrapper').toggleClass('hidden');
 	$('.card-body').html(`
 		<div class="row align-items-center">
 			<div class="col">
@@ -99,7 +99,7 @@ function showStartMenu() {
 		</div>
 		<div class="row align-items-center" style="height: 100px">
 			<div class="col">
-				<button type="button" style="min-width: 150px" class="selectable btn btn-info btn-lg" onClick="showAbout()">
+				<button type="button" style="min-width: 150px" class="selectable btn btn-lg btn-info" onClick="showAbout()">
 					درباره ما
 				</button>
 			</div>
@@ -109,12 +109,12 @@ function showStartMenu() {
 
 function showAbout() {
 	$('div.card').css('background-image', "url('assets/image/main.jpg')");
-	$('.card-header').css('display', 'block');
+	$('.card-header').toggleClass('hidden');
 	$('.card-header').html(`
 		<h4> تیم توسعه بازی </h4>
 		<p> معرفی اعضای تیم مجیک لایت </p>
 	`);
-	$('.card-footer').css('display', 'block');
+	$('.buttons-wrapper').toggleClass('hidden');
 	$('.card-body').html(`
 	<div class="row align-items-center team-card" style="height: 400px;">
 		<div class="col">
@@ -150,9 +150,9 @@ function showAbout() {
 		</div>
 	</div>
 	`);
-	$('.card-footer').css('display', 'block');
-	$('.card-footer').html(`
-	<button type="button" class="selectable btn btn-outline-secondary btn-lg btn-block" onClick="showStartMenu();">بازگشت به منو
+	$('.buttons-wrapper').toggleClass('hidden');
+	$('.buttons-wrapper').html(`
+	<button type="button" class="selectable btn btn-wide" onClick="showStartMenu();">بازگشت به منو
                             </button>
 	`);
 }
@@ -205,11 +205,11 @@ function showScore(opId, totalScore) {
 		</div>
 	</div>
 	`);
-	$('.card-footer').css('display', 'block');
-	$('.card-footer').html(`
-	<button type="button" class="selectable btn btn-outline-secondary btn-lg btn-block" onClick="startGame()">
+	$('.buttons-wrapper').toggleClass('hidden');
+	$('.buttons-wrapper').html(`
+	<button type="button" class="selectable btn" onClick="startGame()">
 	بازی دوباره </button>
-	<button type="button" class="selectable btn btn-outline-primary btn-lg btn-block" onClick="showStartMenu()">
+	<button type="button" class="selectable btn" onClick="showStartMenu()">
 		منوی اصلی </button>
 	`);
 }
@@ -224,18 +224,18 @@ function startGame() {
 	$('.card-header').css('display', 'block');
 	$('.card-header').html(`
 		<nav class="nav nav-pills nav-justified">
-			<a class="nav-item nav-link disabled" href="#">
+			<div class="nav-item nav-link">
 				<div>انرژی</div>
 				<div id="energy">48</div>
-			</a>
-			<a class="nav-item nav-link disabled" href="#">
+			</div>
+			<div class="nav-item nav-link">
 				<div>امتیاز</div>
 				<div id="totalScore">0</div>
-			</a>
-			<a class="nav-item nav-link disabled" href="#">
+			</div>
+			<div class="nav-item nav-link">
 				<div>ساعت</div>
 				<div id="time">8:00</div>
-			</a>
+			</div>
 		</nav>
 	`);
 	$('.card-body').html(`
@@ -246,7 +246,7 @@ function startGame() {
 			</div>
 		</div>
 	`);
-	$('.card-footer').css('display', 'block');
+	$('.buttons-wrapper').toggleClass('hidden');
 
 	totalScore = 0;
 	time = 700;
@@ -282,7 +282,7 @@ function makeStage() {
 		$('#content .card-title').html(currentStage.name);
 		$('#content .card-text').html(currentStage.desc);
 		$('div.card').css('background-image', "url('assets/image/" + currentStage.background + "')");
-		$('.card-footer').empty();
+		$('.buttons-wrapper').empty();
 		$.each(currentStage.options, function (index, eventOption) {
 
 			var notEnoughEnergy = eventOption.event.addedEnergy + energy < 0;
@@ -307,8 +307,8 @@ function makeStage() {
 				})
 			}
 
-			$('.card-footer').append('<button type="button" class="btn ' + otherClass +
-				' btn-lg btn-block"  data-option="' + eventOption.optionId + '"' + isDisable + btnTitle +
+			$('.buttons-wrapper').append('<button type="button" class="btn ' + otherClass +
+				' "  data-option="' + eventOption.optionId + '"' + isDisable + btnTitle +
 				'>' + eventOption.title + '</button>');
 		})
 
@@ -394,7 +394,7 @@ function makeTime(time) {
 	return hour + ':' + min;
 };
 
-// bad performance 
+// bad performance
 function checkAchievment(stId, opId) {
 
 	//find achievment whit this stageId,optionIg
@@ -409,7 +409,7 @@ function checkAchievment(stId, opId) {
 			}
 		}
 	});
-	//achievments.includes()	
+	//achievments.includes()
 }
 
 function showAchivement(achievment) {

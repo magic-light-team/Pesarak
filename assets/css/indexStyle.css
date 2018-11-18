@@ -1,5 +1,20 @@
+@font-face {
+    font-family: 'pesarak';
+    src: url(../fonts/font.ttf);
+}
+
 body {
     margin-top: 2em;
+}
+
+.hidden {
+	display: none;
+}
+
+.board {
+	font-family: 'pesarak';
+	font-weight: bold;
+	font-size: 18px;
 }
 
 button:disabled {
@@ -19,21 +34,35 @@ button.notAllowed:disabled::after {
     min-width: 500px;
 }
 
-div.card {
+.card {
     background-position: center;
     background-size: cover;
-    min-height: 600px;
+	min-height: 800px;
+	border-radius: 0;
+	border: none;
 }
 
-div.card-footer button {
-    background-color: #ffffff99;
+.buttons-wrapper {
+	padding: 10px 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
-div.card-header {
-    background: #fff9;
+.buttons-wrapper .btn {
+	flex: 0 0 265px;
+	margin-bottom: 10px;
 }
 
-div.card-header nav a {
+.buttons-wrapper .btn-wide {
+	flex: 0 0 100%;
+}
+
+.card-header {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.card-header nav a {
     font-weight: 800;
     text-shadow: 2px 2px 8px #fff;
 }

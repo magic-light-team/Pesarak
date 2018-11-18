@@ -9,8 +9,8 @@ var levelInfo = [{
         background: "bed.jpg",
         options: [{
                 optionId: 1,
-                title: "قطع زنگ و خوابیدن",
-                color: "btn-outline-secondary",
+                title: "قطع زنگ و خوابیدن &larr;",
+                color: "btn",
                 event: {
                     nextStage: 2,
                     addedTime: 15,
@@ -20,8 +20,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: " بیدار شدن و شستن و شو",
-                color: "btn-outline-warning",
+                title: "شست و شو و بیدار شدن &larr;",
+                color: "btn",
                 event: {
                     nextStage: 10,
                     addedTime: 5,
@@ -40,8 +40,8 @@ var levelInfo = [{
         background: "bed.jpg",
         options: [{
                 optionId: 1,
-                title: "قطع زنگ و دوباره خوابیدن",
-                color: "btn-outline-secondary",
+                title: "قطع زنگ و دوباره خوابیدن &larr;",
+                color: "btn",
                 event: {
                     nextStage: 3,
                     addedTime: 15,
@@ -51,8 +51,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "بیدار شدن",
-                color: "btn-outline-warning",
+                title: "بیدار شدن &larr;",
+                color: "btn",
                 event: {
                     nextStage: 10,
                     addedTime: 5,
@@ -71,8 +71,8 @@ var levelInfo = [{
         background: "bed.jpg",
         options: [{
                 optionId: 1,
-                title: "سریع بیدار شدن",
-                color: "btn-outline-secondary",
+                title: "سریع بیدار شدن &larr;",
+                color: "btn",
                 event: {
                     nextStage: 10,
                     addedTime: 5,
@@ -82,8 +82,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "به آرامی بیدار شدن",
-                color: "btn-outline-warning",
+                title: "به آرامی بیدار شدن &larr;",
+                color: "btn",
                 event: {
                     nextStage: 10,
                     addedTime: 10,
@@ -103,7 +103,7 @@ var levelInfo = [{
         options: [{
                 optionId: 1,
                 title: "مرتب کردن تخت",
-                color: "btn-outline-secondary",
+                color: "btn",
                 event: {
                     nextStage: 10,
                     addedTime: 5,
@@ -114,7 +114,7 @@ var levelInfo = [{
             {
                 optionId: 2,
                 title: "مرتب کردن میز",
-                color: "btn-outline-warning",
+                color: "btn",
                 event: {
                     nextStage: 10,
                     addedTime: 5,
@@ -125,7 +125,7 @@ var levelInfo = [{
             {
                 optionId: 3,
                 title: "مرتب کردن زمین",
-                color: "btn-outline-info",
+                color: "btn",
                 event: {
                     nextStage: 10,
                     addedTime: 5,
@@ -135,8 +135,8 @@ var levelInfo = [{
             },
             {
                 optionId: 4,
-                title: "رفتن برای صبحانه",
-                color: "btn-outline-danger",
+                title: "رفتن برای صبحانه &larr;",
+                color: "btn",
                 event: {
                     nextStage: 15,
                     addedTime: 0,
@@ -155,8 +155,8 @@ var levelInfo = [{
         background: "roomtable.jpg",
         options: [{
                 optionId: 1,
-                title: "کنترل وسایل داخل کیف و برداشتن تکالیف",
-                color: "btn-outline-secondary",
+                title: "کنترل وسایل داخل کیف و تکالیف",
+                color: "btn",
                 event: {
                     nextStage: 15,
                     addedTime: 5,
@@ -166,8 +166,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "برداشتن کیف و رفتن",
-                color: "btn-outline-info",
+                title: "برداشتن کیف و رفتن &larr;",
+                color: "btn",
                 event: {
                     nextStage: 20,
                     addedTime: 0,
@@ -187,7 +187,7 @@ var levelInfo = [{
         options: [{
                 optionId: 1,
                 title: "نوشیدن شیر",
-                color: "btn-outline-secondary",
+                color: "btn",
                 event: {
                     nextStage: 20,
                     addedTime: 5,
@@ -198,7 +198,7 @@ var levelInfo = [{
             {
                 optionId: 2,
                 title: "نوشیدن چای",
-                color: "btn-outline-danger",
+                color: "btn",
                 event: {
                     nextStage: 20,
                     addedTime: 5,
@@ -209,7 +209,7 @@ var levelInfo = [{
             {
                 optionId: 3,
                 title: "خوردن لقمه",
-                color: "btn-outline-warning",
+                color: "btn",
                 event: {
                     nextStage: 20,
                     addedTime: 5,
@@ -219,8 +219,8 @@ var levelInfo = [{
             },
             {
                 optionId: 4,
-                title: "ترک میز صبحانه",
-                color: "btn-outline-info",
+                title: "ترک میز صبحانه &larr;",
+                color: "btn",
                 event: {
                     nextStage: 25,
                     addedTime: 0,
@@ -239,8 +239,8 @@ var levelInfo = [{
         background: "breakfast.jpg",
         options: [{
                 optionId: 1,
-                title: "آره نوشتم",
-                color: "btn-outline-secondary",
+                title: "آره نوشتم &larr;",
+                color: "btn",
                 event: {
                     nextStage: 26,
                     addedTime: 5,
@@ -250,8 +250,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "نه ننوشتم",
-                color: "btn-outline-warning",
+                title: "نه ننوشتم &larr;",
+                color: "btn",
                 event: {
                     nextStage: 26,
                     addedTime: 5,
@@ -261,8 +261,8 @@ var levelInfo = [{
             },
             {
                 optionId: 3,
-                title: "قطع صحبت و رفتن",
-                color: "btn-outline-info",
+                title: "قطع صحبت و رفتن &larr;",
+                color: "btn",
                 event: {
                     nextStage: 30,
                     addedTime: 0,
@@ -281,8 +281,8 @@ var levelInfo = [{
         background: "breakfast.jpg",
         options: [{
                 optionId: 1,
-                title: "آره کمی مرتب کردم",
-                color: "btn-outline-secondary",
+                title: "آره کمی مرتب کردم &larr;",
+                color: "btn",
                 event: {
                     nextStage: 27,
                     addedTime: 5,
@@ -292,8 +292,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "نه نیازی به مرتب کردن نیست",
-                color: "btn-outline-primary",
+                title: "نه نیازی به مرتب کردن نیست &larr;",
+                color: "btn",
                 event: {
                     nextStage: 27,
                     addedTime: 5,
@@ -303,8 +303,8 @@ var levelInfo = [{
             },
             {
                 optionId: 3,
-                title: "قطع صحبت و رفتن",
-                color: "btn-outline-warning",
+                title: "قطع صحبت و رفتن &larr;",
+                color: "btn",
                 event: {
                     nextStage: 30,
                     addedTime: 0,
@@ -319,12 +319,12 @@ var levelInfo = [{
         level: 3,
         section: 2,
         name: "صحبت با والدین",
-        desc: "مادر:امروز با دوستات میری بیرون بعد مردسه؟",
+        desc: "مادر:امروز با دوستات میری بیرون بعد مردسه؟ &larr;",
         background: "breakfast.jpg",
         options: [{
                 optionId: 1,
-                title: "آره باهاشون میرم بیرون",
-                color: "btn-outline-secondary",
+                title: "آره باهاشون میرم بیرون &larr;",
+                color: "btn",
                 event: {
                     nextStage: 30,
                     addedTime: 5,
@@ -334,8 +334,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "نه فکر نکنم",
-                color: "btn-outline-warning",
+                title: "نه فکر نکنم &larr;",
+                color: "btn",
                 event: {
                     nextStage: 30,
                     addedTime: 5,
@@ -350,12 +350,12 @@ var levelInfo = [{
         level: 4,
         section: 1,
         name: "در مدرسه",
-        desc: "زنگ تفریح دوست داری چه کار کنی؟",
+        desc: "زنگ تفریح دوست داری چه کار کنی؟ &larr;",
         background: "school.jpg",
         options: [{
                 optionId: 1,
                 title: "بازی با بچه ها",
-                color: "btn-outline-secondary",
+                color: "btn",
                 event: {
                     nextStage: 31,
                     addedTime: 15,
@@ -365,8 +365,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "صحبت با دوستان",
-                color: "btn-outline-warning",
+                title: "صحبت با دوستان &larr;",
+                color: "btn",
                 event: {
                     nextStage: 33,
                     addedTime: 15,
@@ -376,8 +376,8 @@ var levelInfo = [{
             },
             {
                 optionId: 3,
-                title: "نشستن یک گوشه",
-                color: "btn-outline-danger",
+                title: "نشستن یک گوشه &larr;",
+                color: "btn",
                 event: {
                     nextStage: 38,
                     addedTime: 15,
@@ -392,12 +392,12 @@ var levelInfo = [{
         level: 4,
         section: 2,
         name: "در مدرسه",
-        desc: " در هنگام بازی با بچه های دیگه یکی جر می زنه",
+        desc: " در هنگام بازی با بچه های دیگه یکی جر می زنه &larr;",
         background: "school.jpg",
         options: [{
                 optionId: 1,
                 title: "تو هم جر می زنی",
-                color: "btn-outline-secondary",
+                color: "btn",
                 event: {
                     nextStage: 32,
                     addedTime: 5,
@@ -407,8 +407,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "جلوی دیگران تحقیرش می کنی",
-                color: "btn-outline-info",
+                title: "جلوی دیگران تحقیرش می کنی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 32,
                     addedTime: 5,
@@ -418,8 +418,8 @@ var levelInfo = [{
             },
             {
                 optionId: 3,
-                title: "با مشت بهش حمله می کنی",
-                color: "btn-outline-secondary",
+                title: "با مشت بهش حمله می کنی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 32,
                     addedTime: 5,
@@ -429,8 +429,8 @@ var levelInfo = [{
             },
             {
                 optionId: 4,
-                title: "گذشت کنی",
-                color: "btn-outline-danger",
+                title: "گذشت کنی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 38,
                     addedTime: 5,
@@ -440,8 +440,8 @@ var levelInfo = [{
             },
             {
                 optionId: 5,
-                title: "از بازی بکشی کنار",
-                color: "btn-outline-primary",
+                title: "از بازی بکشی کنار &larr;",
+                color: "btn",
                 event: {
                     nextStage: 38,
                     addedTime: 5,
@@ -456,12 +456,12 @@ var levelInfo = [{
         level: 4,
         section: 3,
         name: "در مدرسه",
-        desc: "بین چند تا از بچه ها زد و خورد راه افتاده!",
+        desc: "بین چند تا از بچه ها زد و خورد راه افتاده! ",
         background: "school.jpg",
         options: [{
                 optionId: 1,
-                title: "به مدیر یا ناظم خبر می دهم",
-                color: "btn-outline-secondary",
+                title: "به مدیر یا ناظم خبر می دهم &larr;",
+                color: "btn",
                 event: {
                     nextStage: 38,
                     addedTime: 5,
@@ -471,8 +471,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "سعی می کنم از هم جدایشان کنم",
-                color: "btn-outline-warning",
+                title: "سعی می کنم از هم جدایشان کنم &larr;",
+                color: "btn",
                 event: {
                     nextStage: 38,
                     addedTime: 5,
@@ -482,8 +482,8 @@ var levelInfo = [{
             },
             {
                 optionId: 3,
-                title: "فقط تماشا می کنم",
-                color: "btn-outline-primary",
+                title: "فقط تماشا می کنم &larr;",
+                color: "btn",
                 event: {
                     nextStage: 38,
                     addedTime: 5,
@@ -502,8 +502,8 @@ var levelInfo = [{
         background: "school.jpg",
         options: [{
                 optionId: 1,
-                title: "تو هم مثل دیگران پشت سرش صحبت می کنی",
-                color: "btn-outline-secondary",
+                title: "تو هم مثل دیگران پشت سرش صحبت می کنی &larr;",
+                color: "btn btn-wide",
                 event: {
                     nextStage: 34,
                     addedTime: 5,
@@ -513,8 +513,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "بحث رو عوض کنی",
-                color: "btn-outline-danger",
+                title: "بحث رو عوض کنی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 38,
                     addedTime: 5,
@@ -524,8 +524,8 @@ var levelInfo = [{
             },
             {
                 optionId: 3,
-                title: "هیچی نگی",
-                color: "btn-outline-warning",
+                title: "هیچی نگی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 38,
                     addedTime: 5,
@@ -544,8 +544,8 @@ var levelInfo = [{
         background: "school.jpg",
         options: [{
                 optionId: 1,
-                title: "موافقت می کنی",
-                color: "btn-outline-secondary",
+                title: "موافقت می کنی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 35,
                     addedTime: 5,
@@ -555,8 +555,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "مخالفت می کنی",
-                color: "btn-outline-danger",
+                title: "مخالفت می کنی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 35,
                     addedTime: 5,
@@ -566,8 +566,8 @@ var levelInfo = [{
             },
             {
                 optionId: 3,
-                title: "سکوت می کنی",
-                color: "btn-outline-warning",
+                title: "سکوت می کنی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 35,
                     addedTime: 5,
@@ -586,8 +586,8 @@ var levelInfo = [{
         background: "school.jpg",
         options: [{
                 optionId: 1,
-                title: "موافقت می کنی",
-                color: "btn-outline-secondary",
+                title: "موافقت می کنی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 36,
                     addedTime: 5,
@@ -597,8 +597,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "مخالفت می کنی",
-                color: "btn-outline-danger",
+                title: "مخالفت می کنی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 36,
                     addedTime: 5,
@@ -608,8 +608,8 @@ var levelInfo = [{
             },
             {
                 optionId: 3,
-                title: "سکوت می کنی",
-                color: "btn-outline-warning",
+                title: "سکوت می کنی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 36,
                     addedTime: 5,
@@ -628,8 +628,8 @@ var levelInfo = [{
         background: "school.jpg",
         options: [{
                 optionId: 1,
-                title: "موافقت می کنی",
-                color: "btn-outline-secondary",
+                title: "موافقت می کنی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 37,
                     addedTime: 5,
@@ -639,8 +639,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "مخالفت می کنی",
-                color: "btn-outline-danger",
+                title: "مخالفت می کنی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 37,
                     addedTime: 5,
@@ -650,8 +650,8 @@ var levelInfo = [{
             },
             {
                 optionId: 3,
-                title: "سکوت می کنی",
-                color: "btn-outline-warning",
+                title: "سکوت می کنی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 37,
                     addedTime: 5,
@@ -670,8 +670,8 @@ var levelInfo = [{
         background: "school.jpg",
         options: [{
                 optionId: 1,
-                title: "موافقت می کنی",
-                color: "btn-outline-secondary",
+                title: "موافقت می کنی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 38,
                     addedTime: 5,
@@ -681,8 +681,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "مخالفت می کنی",
-                color: "btn-outline-danger",
+                title: "مخالفت می کنی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 38,
                     addedTime: 5,
@@ -692,8 +692,8 @@ var levelInfo = [{
             },
             {
                 optionId: 3,
-                title: "سکوت می کنی",
-                color: "btn-outline-warning",
+                title: "سکوت می کنی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 38,
                     addedTime: 5,
@@ -712,8 +712,8 @@ var levelInfo = [{
         background: "school.jpg",
         options: [{
                 optionId: 1,
-                title: "تکالیفت رو تحویل بدی",
-                color: "btn-outline-secondary",
+                title: "تکالیفت رو تحویل بدی &larr;",
+                color: "btn",
                 event: {
                     nextStage: 39,
                     addedTime: 5,
@@ -728,8 +728,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "بگی تکلیف ننوشتم",
-                color: "btn-outline-warning",
+                title: "بگی تکلیف ننوشتم &larr;",
+                color: "btn",
                 event: {
                     nextStage: 39,
                     addedTime: 5,
@@ -739,8 +739,8 @@ var levelInfo = [{
             },
             {
                 optionId: 3,
-                title: "به خاطر رفتن به دستشویی کلاس رو بپیچونی!",
-                color: "btn-outline-danger",
+                title: "به خاطر رفتن به دستشویی کلاس رو بپیچونی! &larr;",
+                color: "btn btn-wide",
                 event: {
                     nextStage: 39,
                     addedTime: 5,
@@ -760,8 +760,8 @@ var levelInfo = [{
         setGameTime: 1400,
         options: [{
                 optionId: 1,
-                title: "با بچه ها می ریم پارک",
-                color: "btn-outline-info",
+                title: "با بچه ها می ریم پارک &larr;",
+                color: "btn",
                 event: {
                     nextStage: 40,
                     addedTime: 180,
@@ -771,8 +771,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "میرم کتابخونه",
-                color: "btn-outline-secondary",
+                title: "میرم کتابخونه &larr;",
+                color: "btn",
                 event: {
                     nextStage: 40,
                     addedTime: 120,
@@ -782,8 +782,8 @@ var levelInfo = [{
             },
             {
                 optionId: 3,
-                title: "میروم خونه",
-                color: "btn-outline-danger",
+                title: "میروم خونه &larr;",
+                color: "btn",
                 event: {
                     nextStage: 40,
                     addedTime: 20,
@@ -802,8 +802,8 @@ var levelInfo = [{
         background: "room.jpg",
         options: [{
                 optionId: 1,
-                title: "گفتن حقیقت",
-                color: "btn-outline-info",
+                title: "گفتن حقیقت &larr;",
+                color: "btn",
                 event: {
                     nextStage: 41,
                     addedTime: 10,
@@ -813,8 +813,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "دروغ گفتن",
-                color: "btn-outline-danger",
+                title: "دروغ گفتن &larr;",
+                color: "btn",
                 event: {
                     nextStage: 41,
                     addedTime: 10,
@@ -824,8 +824,8 @@ var levelInfo = [{
             },
             {
                 optionId: 3,
-                title: "سکوت کردن",
-                color: "btn-outline-secondary",
+                title: "سکوت کردن &larr;",
+                color: "btn",
                 event: {
                     nextStage: 41,
                     addedTime: 0,
@@ -844,8 +844,8 @@ var levelInfo = [{
         background: "room.jpg",
         options: [{
                 optionId: 1,
-                title: "گفتن حقیقت",
-                color: "btn-outline-info",
+                title: "گفتن حقیقت &larr;",
+                color: "btn",
                 event: {
                     nextStage: 45,
                     addedTime: 10,
@@ -855,8 +855,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "دروغ گفتن",
-                color: "btn-outline-secondary",
+                title: "دروغ گفتن &larr;",
+                color: "btn",
                 event: {
                     nextStage: 45,
                     addedTime: 10,
@@ -866,8 +866,8 @@ var levelInfo = [{
             },
             {
                 optionId: 3,
-                title: "سکوت کردن",
-                color: "btn-outline-danger",
+                title: "سکوت کردن &larr;",
+                color: "btn",
                 event: {
                     nextStage: 45,
                     addedTime: 0,
@@ -887,8 +887,8 @@ var levelInfo = [{
         setGameTime: 2100,
         options: [{
                 optionId: 1,
-                title: "چت با دوستان",
-                color: "btn-outline-secondary",
+                title: "چت با دوستان &larr;",
+                color: "btn",
                 event: {
                     nextStage: -1,
                     addedTime: 10,
@@ -898,8 +898,8 @@ var levelInfo = [{
             },
             {
                 optionId: 2,
-                title: "پست در صفحه های اجتماعی",
-                color: "btn-outline-danger",
+                title: "پست در صفحه های اجتماعی &larr;",
+                color: "btn",
                 event: {
                     nextStage: -1,
                     addedTime: 10,
@@ -909,8 +909,8 @@ var levelInfo = [{
             },
             {
                 optionId: 3,
-                title: "انجام تکالیف",
-                color: "btn-outline-info",
+                title: "انجام تکالیف &larr;",
+                color: "btn",
                 event: {
                     nextStage: -1,
                     addedTime: 30,
@@ -920,8 +920,8 @@ var levelInfo = [{
             },
             {
                 optionId: 4,
-                title: "خوابیدن",
-                color: "btn-outline-warning",
+                title: "خوابیدن &larr;",
+                color: "btn",
                 event: {
                     nextStage: -1,
                     addedTime: 0,
