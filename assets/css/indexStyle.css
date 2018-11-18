@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'pesarak';
-    src: url(../fonts/font.ttf);
-}
-
 body {
     margin-top: 2em;
 }
@@ -12,7 +7,6 @@ body {
 }
 
 .board {
-	font-family: 'pesarak';
 	font-weight: bold;
 	font-size: 18px;
 }
@@ -48,19 +42,16 @@ button.notAllowed:disabled::after {
 }
 
 .buttons-wrapper {
-	padding: 10px 0;
+	padding: 10px;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	flex-direction: column;
+	background-color: rgba(0,0,0,0.75);
 }
 
 .buttons-wrapper .btn {
-	flex: 0 0 265px;
-	margin-bottom: 10px;
-	color: white;
-	box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
-	background-image: linear-gradient(to right, #0062ff 0%, #00a1ff 50%, #0062ff 100%);
-	background-size: 200% auto;
+	margin-top: 10px;
 	transition: 0.3s;
 }
 
@@ -68,12 +59,9 @@ button.notAllowed:disabled::after {
 	background-position: right center;
 }
 
-.buttons-wrapper .btn-wide {
-	flex: 0 0 100%;
-}
-
 .card-header {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(255, 255, 255, 0.75);
+    color: #696969;
 }
 
 .card-header nav a {
@@ -92,7 +80,18 @@ button.notAllowed:disabled::after {
     text-shadow: 2px 2px 8px #393838;
 }
 
-.team-card{
-    height:400;
+.team-card {
+	width: 50%;
+	margin: 0 auto;
     color:black;
+}
+
+.team-card .card {
+	min-height: auto;
+	margin-bottom: 25px;
+}
+
+.btn-outline-secondary {
+	color: #fff !important;
+	border-color: #fff !important;
 }

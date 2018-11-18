@@ -12,38 +12,6 @@ var earnedAchievments = [];
 
 var exports = {}; // type script problem
 
-var stages = [{
-	stageId: 1,
-	level: 1,
-	section: 1,
-	name: 'بیدار شدن',
-	desc: 'ساعت زنگ می زند. می خواهی چکار کنی؟',
-	background: "main.jpg",
-	options: [{
-		optionId: 1,
-		title: 'قطع زنگ و خوابیدن',
-		color: 'btn',
-		event: {
-			nextStage: 2,
-			addedTime: 15,
-			addedEnergy: 20,
-			score: 10
-		}
-	},
-	{
-		optionId: 2,
-		title: ' بیدار شدن و شستن و شو',
-		color: 'btn',
-		event: {
-			nextStage: 10,
-			addedTime: 5,
-			addedEnergy: 0,
-			score: 15
-		}
-	}
-	]
-}];
-
 $(document).ready(function () {
 	//console.log('level1',level1);
 	//stages = level1;
@@ -77,7 +45,6 @@ $(document).ready(function () {
 function showStartMenu() {
 	$('div.card').css('background-image', "url('assets/image/main.jpg')");
 	$('.card-header').toggleClass('hidden');
-	$('.buttons-wrapper').toggleClass('hidden');
 	$('.card-body').html(`
 		<div class="row align-items-center">
 			<div class="col">
@@ -92,7 +59,7 @@ function showStartMenu() {
 		</div>
 		<div class="row align-items-center" style="height: 80px">
 			<div class="col">
-				<button type="button" style="min-width: 150px" class="selectable btn btn-success btn-lg"
+				<button type="button" style="min-width: 150px" class="selectable btn btn-lg btn-success"
 					onClick="startGame()">
 					شروع بازی
 				</button>
@@ -117,9 +84,9 @@ function showAbout() {
 	`);
 	$('.buttons-wrapper').toggleClass('hidden');
 	$('.card-body').html(`
-	<div class="row align-items-center team-card" style="height: 400px;">
+	<div class="row align-items-center team-card">
 		<div class="col">
-			<div class="card text-center" style="width: 18rem;margin: auto;min-height: auto">
+			<div class="card text-center">
 				<img class="card-img-top" src="assets/image/amir.jpg" alt="Card image cap">
 				<div class="card-body">
 					<h5 class="card-title"> امیر سالار سلیمانی </h5>
@@ -128,9 +95,9 @@ function showAbout() {
 			</div>
 		</div>
 	</div>
-	<div class="row align-items-center team-card" style="height: 400px">
+	<div class="row align-items-center team-card">
 		<div class="col">
-			<div class="card text-center" style="width: 18rem;margin: auto;min-height: auto">
+			<div class="card text-center">
 				<img class="card-img-top" src="assets/image/hosein.jpg" alt="Card image cap">
 				<div class="card-body">
 					<h5 class="card-title"> حسین فراهانی </h5>
@@ -139,9 +106,9 @@ function showAbout() {
 			</div>
 		</div>
 	</div>
-	<div class="row align-items-center team-card" style="height: 400px">
+	<div class="row align-items-center team-card">
 		<div class="col">
-			<div class="card text-center" style="width: 18rem;margin: auto;min-height: auto">
+			<div class="card text-center">
 				<img class="card-img-top" src="assets/image/mohsen.jpg" alt="Card image cap">
 				<div class="card-body">
 					<h5 class="card-title"> محسن شعبانیان </h5>
@@ -153,7 +120,7 @@ function showAbout() {
 	`);
 	$('.buttons-wrapper').toggleClass('hidden');
 	$('.buttons-wrapper').html(`
-	<button type="button" class="selectable btn btn-wide" onClick="showStartMenu();">بازگشت به منو
+	<button type="button" class="selectable btn btn-lg" onClick="showStartMenu();">بازگشت به منو
                             </button>
 	`);
 }
@@ -208,9 +175,9 @@ function showScore(opId, totalScore) {
 	`);
 	$('.buttons-wrapper').toggleClass('hidden');
 	$('.buttons-wrapper').html(`
-	<button type="button" class="selectable btn" onClick="startGame()">
+	<button type="button" class="selectable btn btn-lg" onClick="startGame()">
 	بازی دوباره </button>
-	<button type="button" class="selectable btn" onClick="showStartMenu()">
+	<button type="button" class="selectable btn btn-lg" onClick="showStartMenu()">
 		منوی اصلی </button>
 	`);
 }
@@ -308,7 +275,7 @@ function makeStage() {
 				})
 			}
 
-			$('.buttons-wrapper').append('<button type="button" class="btn ' + otherClass +
+			$('.buttons-wrapper').append('<button type="button" class="btn btn-lg ' + otherClass +
 				' "  data-option="' + eventOption.optionId + '"' + isDisable + btnTitle +
 				'>' + eventOption.title + '</button>');
 		})
