@@ -68,3 +68,4 @@ a serius game
   - [ ] or use back-end system
   - [x] use js file
 - [ ] utf8 problem in mxgraph
+- [ ] show/hide dev mode with click

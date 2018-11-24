@@ -1,14 +1,25 @@
-var time;
-var energy;
-var totalScore;
-var stageId;
+// a button click event for show dev mode
 
-var currentStage;
 var disableOptions = [];
-var saveAllChoises = [];
 
-var remainAchievments = [];
-var earnedAchievments = [];
+let remainAchievments = [];
+let earnedAchievments = [];
+
+let game = {
+	time: 700,
+	energy: 50,
+	totalScore: 0,
+	stageId: 1,
+	allChoises: [],
+}
+
+let newGame = {
+	time: 700,
+	energy: 50,
+	totalScore: 0,
+	stageId: 1,
+	allChoises: [],
+}
 
 var exports = {}; // type script problem
 
@@ -216,25 +227,20 @@ function startGame() {
 	`);
 	$('.buttons-wrapper').toggleClass('hidden');
 
-	totalScore = 0;
-	time = 700;
-	energy = 50;
-	stageId = 1;
-
-	saveAllChoises = [];
+	game = newGame;
 
 	makeStage();
 };
 
 
 function makeStage() {
-	$('#totalScore').html(totalScore);
-	$('#time').html(makeTime(time));
-	$('#energy').html(energy);
+	$('#totalScore').html(game.totalScore);
+	$('#time').html(makeTime(game.time));
+	$('#energy').html(game.energy);
 
-	$('#stageId').html(stageId);
+	$('#stageId').html(game.stageId);
 
-	currentStage = stages.find(x => x.stageId === stageId);
+	let currentStage = stages.find(x => x.stageId === game.stageId);
 	if (!currentStage) {
 		console.log('can not find stage')
 		return;
@@ -251,22 +257,23 @@ function makeStage() {
 		$('#content .card-text').html(currentStage.desc);
 		$('div.card').css('background-image', "url('assets/image/" + currentStage.background + "')");
 		$('.buttons-wrapper').empty();
+
 		$.each(currentStage.options, function (index, eventOption) {
 
-			var notEnoughEnergy = eventOption.event.addedEnergy + energy < 0;
-			var isDisable = (notEnoughEnergy || disableOptions.includes(eventOption.optionId)) ? " disabled" : "";
+			var notEnoughEnergy = eventOption.event.addedEnergy + game.energy < 0;
+			var isDisable = (notEnoughEnergy || disableOptions.includes(eventOption.optionId)) ? "disabled" : "";
 			var btnTitle = notEnoughEnergy ? ' title="به اندازه کافی انرژی نداری!"' : "";
 
 			var otherClass = eventOption.color;
 
 			if (eventOption.event.needOptions) {
 				$.each(eventOption.event.needOptions, function (index, needOption) {
-					if (!saveAllChoises.includes({
+					if (!game.allChoises.includes({
 						stageId: needOption.stageId,
 						optionId: needOption.optionId
 					})) {
 						console.log('I have');
-						isDisable = " disabled";
+						isDisable = "disabled";
 						otherClass += " notAllowed";
 						if (needOption.message) {
 							btnTitle = ' title="' + needOption.message + '"';
@@ -276,7 +283,9 @@ function makeStage() {
 			}
 
 			$('.buttons-wrapper').append('<button type="button" class="btn btn-lg ' + otherClass +
-				' "  data-option="' + eventOption.optionId + '"' + isDisable + btnTitle +
+				'" data-option="' + eventOption.optionId + '" data-nextStage="' + eventOption.event.nextStage +
+				'" data-addedTime="' + eventOption.event.addedTime + '" data-addedEnergy="' + eventOption.event.addedEnergy + 
+				'" data-score="' + eventOption.event.score + '" ' + isDisable + btnTitle +
 				'>' + eventOption.title + '</button>');
 		})
 
@@ -293,53 +302,61 @@ $(document).on('click', 'button[data-option]', function (e) {
 	tapSFX.play();
 
 	let opId = Number(e.target.getAttribute('data-option'));
-	var option = currentStage.options.find(x => x.optionId === opId);
-	if (!option) {
-		console.log('can not find option')
-		return;
-	}
-	var event = option.event;
 
-	totalScore += event.score;
-	time += event.addedTime;
-	energy += event.addedEnergy;
+	let nextStage = Number(e.target.getAttribute('data-nextStage'));
+	let score = Number(e.target.getAttribute('data-score'));
+	let addedTime = Number(e.target.getAttribute('data-addedTime'));
+	let addedEnergy = Number(e.target.getAttribute('data-addedEnergy'));
 
-	if (energy === 0) {
+	// let option = game.currentStage.options.find(x => x.optionId === opId);
+	// if (!option) {
+	// 	console.log('can not find option')
+	// 	return;
+	// }
+	// let event = option.event;
+
+	game.totalScore += score;
+	game.time += addedTime;
+	game.energy += addedEnergy;
+
+	if (game.energy === 0) {
 		showAchivement(achievments.find(ach => ach.achievmentId == 5));
 	}
 
-	if (event.setGameTime) {
-		time = event.setGameTime;
-	}
 
-	if (stageId == event.nextStage) {
+	// wrong
+	// if (event.setGameTime) {
+	// 	game.time = event.setGameTime;
+	// }
+
+	if (game.stageId == nextStage) {
 		// add to disable option
 		disableOptions.push(opId);
 		//console.log(disableOptions);
-	} else if (event.nextStage == -1) {
+	} else if (nextStage == -1) {
 		//window.location.href = 'score.html';
-		showScore(opId, totalScore);
+		showScore(opId, game.totalScore);
 	} else {
 		disableOptions = [];
 	}
 
-	saveAllChoises.push({
-		stageId: stageId,
+	game.allChoises.push({
+		stageId: game.stageId,
 		optionId: opId
 	});
 
-	checkAchievment(stageId, opId);
+	checkAchievment(game.stageId, opId);
 
-	stageId = event.nextStage;
+	game.stageId = nextStage;
 
 	var randomAlertColor = alertColor[Math.floor(Math.random() * alertColor.length)];
 
 	$('div.jumbotron>div.container').append(
 		'<div class="alert text-left ' + randomAlertColor +
 		' alert-dismissible fade show" role="alert"><strong>تغییرات:</strong> score:' +
-		(event.score < 0 ? event.score : ('+' + event.score)) + ' - time: ' + (event.addedTime < 0 ? event.addedTime :
-			('+' + event.addedTime)) +
-		' - energy: ' + (event.addedEnergy < 0 ? event.addedEnergy : ('+' + event.addedEnergy)) +
+		(score < 0 ? score : ('+' + score)) + ' - time: ' + (addedTime < 0 ? addedTime :
+			('+' + addedTime)) +
+		' - energy: ' + (addedEnergy < 0 ? addedEnergy : ('+' + addedEnergy)) +
 		'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
 	);
 
