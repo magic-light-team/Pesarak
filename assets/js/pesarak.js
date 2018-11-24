@@ -1,4 +1,3 @@
-// a button click event for show dev mode
 
 var disableOptions = [];
 
@@ -423,3 +422,14 @@ function rebuildRemainAchievment() {
 //$('#myModal').modal('show')
 //$('#myModal').modal('hide')
 //$('#myModal').on('hidden.bs.modal', function (e) { })
+
+// a button click event for show dev mode
+$(document).keypress(function(event){
+	let code = event.keyCode || event.which;
+	let char = String.fromCharCode(code); 
+	if( char === 'm'|| char === 'M'){
+		$('.jumbotron.jumbotron-fluid').css('display','block');
+	}else if( char === 'n'|| char === 'N'){
+		$('.jumbotron.jumbotron-fluid').css('display','none');
+	}
+})
