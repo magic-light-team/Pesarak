@@ -23,6 +23,7 @@ a serius game
   - [x] make about page
   - [x] make it all in Ine page without refresh or change page - Single Page App
   - [ ] add website address in aboat page
+  - [ ] make achievment page
 - [ ] add graphic
   - [ ] add pic, gif or image between stage depend on choose
   - [x] add theme for any stage
