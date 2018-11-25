@@ -1,3 +1,4 @@
+// use Object.assign(game, newGame)
 
 var disableOptions = [];
 
